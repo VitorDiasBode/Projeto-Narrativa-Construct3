@@ -31,6 +31,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 258958042941546
+		},
+		{
+			"name": "preparar_escrita",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 801174370729159
 		}
 	],
 	"behaviorTypes": [],

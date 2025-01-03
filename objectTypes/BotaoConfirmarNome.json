@@ -1,0 +1,194 @@
+{
+	"name": "BotaoConfirmarNome",
+	"plugin-id": "Sprite",
+	"sid": 199195418265415,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 320,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7085990,
+						"collisionPoly": {
+							"points": [
+								0.059375,
+								0,
+								0.95,
+								0.02,
+								0.96875,
+								0.08,
+								0.96875,
+								0.92,
+								0.940625,
+								1,
+								0.05,
+								0.98,
+								0.03125,
+								0.92,
+								0.03125,
+								0.08
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 332360619289043,
+				"name": "Normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 320,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8811595,
+						"collisionPoly": {
+							"points": [
+								0.059375,
+								0,
+								0.95,
+								0.02,
+								0.96875,
+								0.08,
+								0.96875,
+								0.92,
+								0.940625,
+								1,
+								0.05,
+								0.98,
+								0.03125,
+								0.92,
+								0.03125,
+								0.08
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 746779294579211,
+				"name": "Sobreposto",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 320,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9715176,
+						"collisionPoly": {
+							"points": [
+								0.059375,
+								0,
+								0.95,
+								0.02,
+								0.96875,
+								0.08,
+								0.96875,
+								0.92,
+								0.940625,
+								1,
+								0.05,
+								0.98,
+								0.03125,
+								0.92,
+								0.03125,
+								0.08
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 766859683403604,
+				"name": "Pressionado",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 320,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8350069,
+						"collisionPoly": {
+							"points": [
+								0.059375,
+								0,
+								0.95,
+								0.02,
+								0.96875,
+								0.08,
+								0.96875,
+								0.92,
+								0.940625,
+								1,
+								0.05,
+								0.98,
+								0.03125,
+								0.92,
+								0.03125,
+								0.08
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 393137765314828,
+				"name": "Desabilitado",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
