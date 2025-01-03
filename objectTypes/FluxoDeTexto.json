@@ -1,0 +1,38 @@
+{
+	"name": "FluxoDeTexto",
+	"plugin-id": "Text",
+	"sid": 791546493777178,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "texto_final",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 922259739611621
+		},
+		{
+			"name": "tempo_para_escrever",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 332823049682483
+		},
+		{
+			"name": "escrevendo",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 307880802536781
+		},
+		{
+			"name": "letras_escritas",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 258958042941546
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

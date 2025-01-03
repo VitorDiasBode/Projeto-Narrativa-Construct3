@@ -1,5 +1,129 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fluxo de Texto",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "FluxoDeTexto",
+							"sid": 132774747030944
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FluxoDeTexto",
+							"sid": 424019074897540,
+							"parameters": {
+								"instance-variable": "texto_final",
+								"value": "Self.Text"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "FluxoDeTexto",
+							"sid": 390761959477408,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 899326552667892
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "FluxoDeTexto",
+							"sid": 202087265060250,
+							"parameters": {
+								"instance-variable": "escrevendo"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 320125902470777,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "FluxoDeTexto",
+									"sid": 380226355125486,
+									"parameters": {
+										"instance-variable": "tempo_para_escrever",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FluxoDeTexto",
+									"sid": 288483258410359,
+									"parameters": {
+										"instance-variable": "tempo_para_escrever",
+										"value": "Self.tempo_para_escrever - dt"
+									}
+								}
+							],
+							"sid": 789221825297601
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 815622834954315
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FluxoDeTexto",
+									"sid": 789695594709046,
+									"parameters": {
+										"instance-variable": "letras_escritas",
+										"value": "Self.letras_escritas+1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "FluxoDeTexto",
+									"sid": 235513777626347,
+									"parameters": {
+										"text": "left(Self.texto_final, Self.letras_escritas)"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FluxoDeTexto",
+									"sid": 283940718738978,
+									"parameters": {
+										"instance-variable": "tempo_para_escrever",
+										"value": "0.01"
+									}
+								}
+							],
+							"sid": 909566940274407
+						}
+					]
+				}
+			],
+			"sid": 774089783257646
+		}
+	],
 	"sid": 385103902642560
 }
