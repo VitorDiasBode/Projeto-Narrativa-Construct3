@@ -51,12 +51,14 @@
 				"name": "Botaos"
 			},
 			{
-				"items": [],
+				"items": [
+					"TelaDeFundo"
+				],
 				"subfolders": [
 					{
 						"items": [
-							"Cena1_InicioDaJornada",
-							"TextInput"
+							"TextInput",
+							"FundoDoTextoMenor"
 						],
 						"subfolders": [],
 						"name": "Cena1"
@@ -67,8 +69,7 @@
 			{
 				"items": [
 					"FluxoDeTexto",
-					"FundoDoTexto",
-					"FundoDoTextoMenor"
+					"FundoDoTexto"
 				],
 				"subfolders": [],
 				"name": "Fluxo de Texto"
@@ -83,7 +84,10 @@
 	},
 	"layouts": {
 		"items": [
-			"Cena1"
+			"CenaExemplo",
+			"Cena1",
+			"Cena2",
+			"Cena3"
 		],
 		"subfolders": []
 	},

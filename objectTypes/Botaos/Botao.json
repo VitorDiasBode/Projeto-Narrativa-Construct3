@@ -3,7 +3,15 @@
 	"plugin-id": "Sprite",
 	"sid": 183725323725472,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "destino",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 490029848446958
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
