@@ -1,11 +1,52 @@
 {
-	"name": "Layout 1",
+	"name": "Cena1",
 	"layers": [
 		{
-			"name": "Principal",
+			"name": "Tela de Fundo",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Cena1_InicioDaJornada",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"sid": 409345611203669,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 409345611203669,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 512,
+						"y": 363,
+						"width": 1051.9736154301477,
+						"height": 748.070126528105,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 305663652918747,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -64,12 +105,164 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 512,
-						"y": 408,
+						"x": 252,
+						"y": 458,
 						"width": 320,
 						"height": 50,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Botao",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Normal",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"sid": 173159083368819,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 173159083368819,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 252,
+						"y": 518,
+						"width": 320,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text",
+					"properties": {
+						"text": "Explorar a vila misteriosa",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 13,
+					"sid": 406537263622151,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 406537263622151,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 146.37348052684558,
+						"y": 443.3011969739933,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text",
+					"properties": {
+						"text": "Investigar a floresta encantada",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 14,
+					"sid": 196863743853877,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 196863743853877,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 141.37348052684558,
+						"y": 502.31661165060325,
+						"width": 228.73685462091964,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -116,7 +309,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "TextBackGround",
+					"type": "FundoDoTexto",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -139,8 +332,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 512,
-						"y": 195,
+						"x": 252,
+						"y": 225,
 						"width": 420,
 						"height": 320,
 						"originX": 0.5,
@@ -171,7 +364,7 @@
 							0,
 							1
 						],
-						"horizontal-alignment": "left",
+						"horizontal-alignment": "center",
 						"vertical-alignment": "top",
 						"wrapping": "word",
 						"text-direction": "ltr",
@@ -201,8 +394,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 312,
-						"y": 44,
+						"x": 52,
+						"y": 74,
 						"width": 400,
 						"height": 300,
 						"originX": 0,
@@ -282,8 +475,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 402,
-						"y": 384,
+						"x": 154,
+						"y": 407,
 						"width": 220,
 						"height": 30,
 						"originX": 0,
@@ -320,8 +513,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 512,
-						"y": 487,
+						"x": 264,
+						"y": 510,
 						"width": 320,
 						"height": 50,
 						"originX": 0.5,
@@ -376,8 +569,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 412,
-						"y": 473,
+						"x": 164,
+						"y": 496,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -416,8 +609,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 512,
-						"y": 196,
+						"x": 264,
+						"y": 219,
 						"width": 420,
 						"height": 145,
 						"originX": 0.5,
@@ -472,8 +665,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 312,
-						"y": 133,
+						"x": 64,
+						"y": 156,
 						"width": 400,
 						"height": 124,
 						"originX": 0,

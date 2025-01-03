@@ -38,16 +38,42 @@
 	"uniqueId": "1jzqtr1iq51",
 	"objectTypes": {
 		"items": [
-			"FluxoDeTexto",
 			"Mouse",
-			"Botao",
-			"TextBackGround",
-			"TextInput",
-			"BotaoConfirmarNome",
-			"Text",
-			"FundoDoTextoMenor"
+			"Text"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Botao",
+					"BotaoConfirmarNome"
+				],
+				"subfolders": [],
+				"name": "Botaos"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"Cena1_InicioDaJornada",
+							"TextInput"
+						],
+						"subfolders": [],
+						"name": "Cena1"
+					}
+				],
+				"name": "Cenas"
+			},
+			{
+				"items": [
+					"FluxoDeTexto",
+					"FundoDoTexto",
+					"FundoDoTextoMenor"
+				],
+				"subfolders": [],
+				"name": "Fluxo de Texto"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -57,7 +83,7 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Cena1"
 		],
 		"subfolders": []
 	},
