@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "nome",
+			"type": "string",
+			"initialValue": "Keith",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 960811694522922
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Fluxo de Texto",
@@ -33,6 +43,15 @@
 							"sid": 390761959477408,
 							"parameters": {
 								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FluxoDeTexto",
+							"sid": 435671323256670,
+							"parameters": {
+								"instance-variable": "texto_final",
+								"value": "replace( Self.texto_final, \"{nome do personagem}\", nome )"
 							}
 						}
 					],

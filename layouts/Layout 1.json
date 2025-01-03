@@ -9,7 +9,7 @@
 				{
 					"type": "FluxoDeTexto",
 					"properties": {
-						"text": "Ola Mundo esse é um teste para escrever o texto\nOla Mundo esse é um teste para escrever o texto\nOla Mundo esse é um teste para escrever o texto\nOla Mundo esse é um teste para escrever o texto",
+						"text": "Bem-vindo à aventura de {nome do personagem}! Após anos vivendo uma vida comum, {nome do personagem} sente que é hora de explorar novos caminhos. Mas qual será o primeiro passo dessa jornada? Você pode guiá-lo a explorar uma vila misteriosa ou investigar uma floresta encantada. Escolha sabiamente o destino de {nome do personagem}.",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
