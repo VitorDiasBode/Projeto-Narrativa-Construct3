@@ -9,7 +9,7 @@
 				{
 					"type": "FluxoDeTexto",
 					"properties": {
-						"text": "Ola Mundo esse é um teste para escrever o texto",
+						"text": "Ola Mundo esse é um teste para escrever o texto\nOla Mundo esse é um teste para escrever o texto\nOla Mundo esse é um teste para escrever o texto\nOla Mundo esse é um teste para escrever o texto",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,

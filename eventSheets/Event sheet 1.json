@@ -118,6 +118,51 @@
 								}
 							],
 							"sid": 909566940274407
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 501075740471590,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "FluxoDeTexto",
+									"sid": 731768717903440,
+									"parameters": {
+										"instance-variable": "letras_escritas",
+										"comparison": 5,
+										"value": "len( Self.texto_final)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "FluxoDeTexto",
+									"sid": 201839093178047,
+									"parameters": {
+										"instance-variable": "escrevendo",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "FluxoDeTexto",
+									"sid": 299459814982681,
+									"parameters": {
+										"text": "Self.texto_final"
+									}
+								}
+							],
+							"sid": 796945439106627,
+							"isOrBlock": true
 						}
 					]
 				}
