@@ -10,7 +10,7 @@
 					"type": "TelaDeFundo",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Cena2",
+						"initial-animation": "Cena2_1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -94,7 +94,7 @@
 					"sid": 550963842405835,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_1"
+						"destino": "Cena2_2"
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -136,7 +136,7 @@
 					"sid": 498811274760920,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_1"
+						"destino": "Cena2_2"
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -168,7 +168,7 @@
 				{
 					"type": "Text",
 					"properties": {
-						"text": "Examinar o símbolo no chão",
+						"text": "Tentar decifrar o símbolo",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -224,7 +224,7 @@
 				{
 					"type": "Text",
 					"properties": {
-						"text": "Seguir para as ruínas ao norte",
+						"text": "Ignorar o símbolo e seguir para as ruínas",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -261,9 +261,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 120,
-						"y": 502.31661165060325,
-						"width": 250,
+						"x": 95,
+						"y": 503.31661165060325,
+						"width": 317,
 						"height": 30,
 						"originX": 0,
 						"originY": 0,
@@ -355,7 +355,7 @@
 				{
 					"type": "FluxoDeTexto",
 					"properties": {
-						"text": "{nome do personagem} caminha pelas ruas desertas da vila. Cada casa parece carregar histórias não contadas, enquanto o vento sopra uma melodia antiga. No centro da vila, há uma fonte quebrada e um estranho símbolo desenhado no chão. Algo nesta vila está pedindo para ser desvendado. Qual será o próximo passo?",
+						"text": "{nome do personagem} se aproxima do símbolo no chão. As linhas brilhavam fracamente enquanto ele o examinava. Uma voz ecoa ao longe: 'Escolhas definem o futuro.' O símbolo parece pedir algo mais... mas o que? Por outro lado, as ruínas ao norte chamam com um sussurro mais forte. O que {nome do personagem} fará?",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,

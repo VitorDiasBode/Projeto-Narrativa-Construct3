@@ -1,5 +1,5 @@
 {
-	"name": "CenaExemplo",
+	"name": "Cena3_1",
 	"layers": [
 		{
 			"name": "Tela de Fundo",
@@ -10,18 +10,18 @@
 					"type": "TelaDeFundo",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Cena1",
+						"initial-animation": "Cena2_1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 15,
-					"sid": 503260721338404,
+					"uid": 55,
+					"sid": 906334194225765,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 503260721338404,
+						"sid": 906334194225765,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -32,8 +32,8 @@
 					"world": {
 						"x": 512,
 						"y": 363,
-						"width": 748.070126528105,
-						"height": 438.3223397625615,
+						"width": 1051.9736154301477,
+						"height": 748.070126528105,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -47,7 +47,7 @@
 					}
 				}
 			],
-			"sid": 693360075437153,
+			"sid": 231976015485099,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -90,15 +90,15 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 16,
-					"sid": 267822236223890,
+					"uid": 56,
+					"sid": 391204737326160,
 					"tags": "",
 					"instanceVariables": {
-						"destino": ""
+						"destino": "Cena2_2"
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 267822236223890,
+						"sid": 391204737326160,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -132,15 +132,15 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 17,
-					"sid": 567182721639179,
+					"uid": 57,
+					"sid": 327332310935479,
 					"tags": "",
 					"instanceVariables": {
-						"destino": ""
+						"destino": "Cena2_2"
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 567182721639179,
+						"sid": 327332310935479,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -168,7 +168,7 @@
 				{
 					"type": "Text",
 					"properties": {
-						"text": "Botao 1",
+						"text": "Tentar decifrar o símbolo",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -190,13 +190,13 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 18,
-					"sid": 815956183913240,
+					"uid": 58,
+					"sid": 513668553657496,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 815956183913240,
+						"sid": 513668553657496,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -224,7 +224,7 @@
 				{
 					"type": "Text",
 					"properties": {
-						"text": "Botao 2",
+						"text": "Ignorar o símbolo e seguir para as ruínas",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -246,13 +246,13 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 19,
-					"sid": 435460144483045,
+					"uid": 59,
+					"sid": 909667171148778,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 435460144483045,
+						"sid": 909667171148778,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -261,9 +261,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 126,
-						"y": 502.31661165060325,
-						"width": 250,
+						"x": 95,
+						"y": 503.31661165060325,
+						"width": 317,
 						"height": 30,
 						"originX": 0,
 						"originY": 0,
@@ -278,7 +278,7 @@
 					}
 				}
 			],
-			"sid": 683632187949576,
+			"sid": 550605075798116,
 			"effectTypes": [],
 			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
@@ -321,13 +321,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 20,
-					"sid": 924574147833017,
+					"uid": 60,
+					"sid": 127072346068613,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 924574147833017,
+						"sid": 127072346068613,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -355,7 +355,7 @@
 				{
 					"type": "FluxoDeTexto",
 					"properties": {
-						"text": "Texto de exemplo para testar se ele esta funcionado bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
+						"text": "{nome do personagem} se aproxima do símbolo no chão. As linhas brilhavam fracamente enquanto ele o examinava. Uma voz ecoa ao longe: 'Escolhas definem o futuro.' O símbolo parece pedir algo mais... mas o que? Por outro lado, as ruínas ao norte chamam com um sussurro mais forte. O que {nome do personagem} fará?",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -377,8 +377,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 21,
-					"sid": 519949802856065,
+					"uid": 61,
+					"sid": 785505115201502,
 					"tags": "",
 					"instanceVariables": {
 						"texto_final": "",
@@ -389,7 +389,7 @@
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 519949802856065,
+						"sid": 785505115201502,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -415,7 +415,7 @@
 					}
 				}
 			],
-			"sid": 265573466309232,
+			"sid": 122717006113424,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -449,7 +449,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 488105621600781,
+	"sid": 641835589996846,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 2048,

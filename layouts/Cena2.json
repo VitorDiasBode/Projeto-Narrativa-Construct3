@@ -31,9 +31,9 @@
 					"locked": false,
 					"world": {
 						"x": 512,
-						"y": 363,
-						"width": 1051.9736154301477,
-						"height": 748.070126528105,
+						"y": 300,
+						"width": 1024,
+						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
