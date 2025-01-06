@@ -10,7 +10,7 @@
 					"type": "TelaDeFundo",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Cena2_1",
+						"initial-animation": "Cena2_2",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -31,9 +31,9 @@
 					"locked": false,
 					"world": {
 						"x": 512,
-						"y": 363,
-						"width": 1051.9736154301477,
-						"height": 748.070126528105,
+						"y": 300,
+						"width": 1024,
+						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -94,7 +94,10 @@
 					"sid": 926960456607425,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_2"
+						"destino": "Cena2_1",
+						"desbloquear_cena_extra": false,
+						"botao_extra": true,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -136,7 +139,10 @@
 					"sid": 819740011261331,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_2"
+						"destino": "Cena2_2",
+						"desbloquear_cena_extra": false,
+						"botao_extra": false,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -168,7 +174,7 @@
 				{
 					"type": "Text",
 					"properties": {
-						"text": "Tentar decifrar o símbolo",
+						"text": "Explorar mais o símbolo",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -224,7 +230,7 @@
 				{
 					"type": "Text",
 					"properties": {
-						"text": "Ignorar o símbolo e seguir para as ruínas",
+						"text": "Seguir para o final",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,

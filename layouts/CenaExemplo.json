@@ -94,7 +94,10 @@
 					"sid": 267822236223890,
 					"tags": "",
 					"instanceVariables": {
-						"destino": ""
+						"destino": "",
+						"desbloquear_cena_extra": false,
+						"botao_extra": false,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -136,7 +139,10 @@
 					"sid": 567182721639179,
 					"tags": "",
 					"instanceVariables": {
-						"destino": ""
+						"destino": "",
+						"desbloquear_cena_extra": false,
+						"botao_extra": false,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
