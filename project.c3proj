@@ -108,8 +108,7 @@
 	"eventSheets": {
 		"items": [
 			"Event sheet 1",
-			"ES_EmbaralhadorDePalavras",
-			"ES_Botoes"
+			"ES_EmbaralhadorDePalavras"
 		],
 		"subfolders": []
 	},
