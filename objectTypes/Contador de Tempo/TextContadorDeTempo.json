@@ -1,0 +1,24 @@
+{
+	"name": "TextContadorDeTempo",
+	"plugin-id": "Text",
+	"sid": 849392635589430,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "tempo",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 475151495052419
+		},
+		{
+			"name": "esta_contando",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 565842371876595
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

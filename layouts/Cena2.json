@@ -172,7 +172,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Examinar o símbolo no chão",
 						"enable-bbcode": true,
@@ -228,7 +228,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Seguir para as ruínas ao norte",
 						"enable-bbcode": true,

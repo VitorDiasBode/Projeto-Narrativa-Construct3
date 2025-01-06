@@ -22,240 +22,93 @@
 			"sid": 458313462358893
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 745491106947743
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 161618630561956,
+					"parameters": {
+						"layer": "\"Menu de escolhas\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 827218790724300
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Botao",
+			"title": "Botoes",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-created",
-							"objectClass": "Botao",
-							"sid": 336634240911296
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Botao",
-							"sid": 306815293066688,
-							"parameters": {
-								"instance-variable": "botao_extra"
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 159269971572724,
-							"parameters": {
-								"variable": "cena_extra_bloqueada"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Botao",
-							"sid": 926152163696248,
-							"parameters": {
-								"instance-variable": "desabilitado",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 506737566166559
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 567323473355611,
-							"parameters": {
-								"object": "Botao"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 211755176666218,
+					"eventType": "group",
+					"disabled": false,
+					"title": "Botao",
+					"description": "",
+					"isActiveOnStart": true,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-created",
+									"objectClass": "Botao",
+									"sid": 778776988336267
+								},
+								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Botao",
-									"sid": 678602242884029,
+									"sid": 115109712831557,
 									"parameters": {
-										"instance-variable": "desabilitado"
+										"instance-variable": "botao_extra"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 230407990489949,
+									"parameters": {
+										"variable": "cena_extra_bloqueada"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-animation",
+									"id": "set-boolean-instvar",
 									"objectClass": "Botao",
-									"sid": 252395854879205,
+									"sid": 320396220410072,
 									"parameters": {
-										"animation": "\"Desabilitado\"",
-										"from": "beginning"
+										"instance-variable": "desabilitado",
+										"value": "true"
 									}
 								}
 							],
-							"sid": 855406785856085
+							"sid": 879570835982023
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "else",
+									"id": "for-each",
 									"objectClass": "System",
-									"sid": 545804554057078
-								},
-								{
-									"id": "cursor-is-over-object",
-									"objectClass": "Mouse",
-									"sid": 920716470788724,
+									"sid": 420409068330982,
 									"parameters": {
 										"object": "Botao"
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "set-cursor-style",
-									"objectClass": "Mouse",
-									"sid": 127628889006241,
-									"parameters": {
-										"cursor-style": "hand"
-									}
-								}
-							],
-							"sid": 775560499644288,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "mouse-button-is-down",
-											"objectClass": "Mouse",
-											"sid": 737526443027553,
-											"parameters": {
-												"mouse-button": "left"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "Botao",
-											"sid": 140797617518787,
-											"parameters": {
-												"animation": "\"Pressionado\"",
-												"from": "beginning"
-											}
-										}
-									],
-									"sid": 910767484609176
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 909703109118804
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "Botao",
-											"sid": 549274291720759,
-											"parameters": {
-												"animation": "\"Sobreposto\"",
-												"from": "beginning"
-											}
-										}
-									],
-									"sid": 945244193372335
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 953314718288257
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Botao",
-									"sid": 127184945214806,
-									"parameters": {
-										"animation": "\"Normal\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-cursor-style",
-									"objectClass": "Mouse",
-									"sid": 729282404226576,
-									"parameters": {
-										"cursor-style": "normal"
-									}
-								}
-							],
-							"sid": 984835989339331
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "layer-is-visible",
-							"objectClass": "System",
-							"sid": 777178613690497,
-							"parameters": {
-								"layer": "\"Menu de escolhas\""
-							}
-						}
-					],
-					"actions": [],
-					"sid": 680419975245391,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-object-clicked",
-									"objectClass": "Mouse",
-									"sid": 389545825894740,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "Botao"
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Botao",
-									"sid": 256477769615157,
-									"parameters": {
-										"instance-variable": "desabilitado"
-									},
-									"isInverted": true
-								}
-							],
 							"actions": [],
-							"sid": 445192622342186,
+							"sid": 174044970792771,
 							"children": [
 								{
 									"eventType": "block",
@@ -263,46 +116,409 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "Botao",
-											"sid": 472041012230632,
+											"sid": 660634601357127,
 											"parameters": {
-												"instance-variable": "desbloquear_cena_extra"
+												"instance-variable": "desabilitado"
 											}
 										}
 									],
 									"actions": [
 										{
-											"id": "set-boolean-eventvar",
-											"objectClass": "System",
-											"sid": 305157486180163,
+											"id": "set-animation",
+											"objectClass": "Botao",
+											"sid": 416082260532186,
 											"parameters": {
-												"variable": "cena_extra_bloqueada",
-												"value": "false"
+												"animation": "\"Desabilitado\"",
+												"from": "beginning"
 											}
 										}
 									],
-									"sid": 213971013538235
+									"sid": 974034887666209
 								},
 								{
 									"eventType": "block",
-									"conditions": [],
-									"actions": [
+									"conditions": [
 										{
-											"id": "go-to-layout-by-name",
+											"id": "else",
 											"objectClass": "System",
-											"sid": 751206643828669,
+											"sid": 188029800593442
+										},
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 307689330267921,
 											"parameters": {
-												"layout": "Botao.destino"
+												"object": "Botao"
 											}
 										}
 									],
-									"sid": 386573180768120
+									"actions": [
+										{
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 366895861530593,
+											"parameters": {
+												"cursor-style": "hand"
+											}
+										}
+									],
+									"sid": 990150986413768,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "mouse-button-is-down",
+													"objectClass": "Mouse",
+													"sid": 170004766734571,
+													"parameters": {
+														"mouse-button": "left"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Botao",
+													"sid": 912671420915269,
+													"parameters": {
+														"animation": "\"Pressionado\"",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 422336811558752
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 736290949887012
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Botao",
+													"sid": 591712518855054,
+													"parameters": {
+														"animation": "\"Sobreposto\"",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 393085742140996
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 416393354676661
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Botao",
+											"sid": 766491290106420,
+											"parameters": {
+												"animation": "\"Normal\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 104565678378445,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										}
+									],
+									"sid": 621627181351297
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 594456797365400,
+									"parameters": {
+										"layer": "\"Menu de escolhas\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 528627181291081,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 587855420441617,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "Botao"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Botao",
+											"sid": 323350378876220,
+											"parameters": {
+												"instance-variable": "desabilitado"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [],
+									"sid": 474364515072600,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Botao",
+													"sid": 924754572818346,
+													"parameters": {
+														"instance-variable": "desbloquear_cena_extra"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 953409592470334,
+													"parameters": {
+														"variable": "cena_extra_bloqueada",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 213960909713855
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "go-to-layout-by-name",
+													"objectClass": "System",
+													"sid": 142254233505774,
+													"parameters": {
+														"layout": "Botao.destino"
+													}
+												}
+											],
+											"sid": 715977805932207
+										}
+									]
 								}
 							]
 						}
-					]
+					],
+					"sid": 750952615991146
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "BotaoConfirmarNome",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 104110105199606,
+									"parameters": {
+										"layer": "\"Escolher Nome\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 548136443544737,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "cursor-is-over-object",
+											"objectClass": "Mouse",
+											"sid": 518813251236116,
+											"parameters": {
+												"object": "BotaoConfirmarNome"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 988056756232285,
+											"parameters": {
+												"cursor-style": "hand"
+											}
+										}
+									],
+									"sid": 551115731904593,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "mouse-button-is-down",
+													"objectClass": "Mouse",
+													"sid": 146388451108048,
+													"parameters": {
+														"mouse-button": "left"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "BotaoConfirmarNome",
+													"sid": 759072831654233,
+													"parameters": {
+														"animation": "\"Pressionado\"",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 389624587410150
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 646778169355638
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "BotaoConfirmarNome",
+													"sid": 725358987344992,
+													"parameters": {
+														"animation": "\"Sobreposto\"",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 354792834463311
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 275969830313597
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "BotaoConfirmarNome",
+											"sid": 790459111783741,
+											"parameters": {
+												"animation": "\"Normal\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-cursor-style",
+											"objectClass": "Mouse",
+											"sid": 599923757755533,
+											"parameters": {
+												"cursor-style": "normal"
+											}
+										}
+									],
+									"sid": 146060606861482
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-object-clicked",
+											"objectClass": "Mouse",
+											"sid": 757785551023350,
+											"parameters": {
+												"mouse-button": "left",
+												"click-type": "clicked",
+												"object-clicked": "BotaoConfirmarNome"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 363668319217215,
+											"parameters": {
+												"variable": "nome",
+												"value": "TextInputEscolherNome.Text"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 293881979805883,
+											"parameters": {
+												"layer": "\"Escolher Nome\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 726972395878993,
+											"parameters": {
+												"layer": "\"Fluxo de Texto\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "FluxoDeTexto",
+											"sid": 403677190020363,
+											"parameters": {
+												"instance-variable": "preparar_escrita",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 718879956552103
+								}
+							]
+						}
+					],
+					"sid": 614999967246501
 				}
 			],
-			"sid": 691677755299307
+			"sid": 939300524732558
 		},
 		{
 			"eventType": "group",
@@ -599,7 +815,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "BotaoConfirmarNome",
+			"title": "ContadorDeTempo",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -607,178 +823,50 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "layer-is-visible",
+							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 601298497080417,
+							"sid": 199226705535859
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 798063614033208,
 							"parameters": {
-								"layer": "\"Escolher Nome\""
+								"text": "str( int( Self.tempo) )"
 							}
 						}
 					],
-					"actions": [],
-					"sid": 597562806549387,
-					"children": [
+					"sid": 645194144248580
+				},
+				{
+					"eventType": "block",
+					"conditions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "cursor-is-over-object",
-									"objectClass": "Mouse",
-									"sid": 809782449586055,
-									"parameters": {
-										"object": "BotaoConfirmarNome"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-cursor-style",
-									"objectClass": "Mouse",
-									"sid": 966748952099131,
-									"parameters": {
-										"cursor-style": "hand"
-									}
-								}
-							],
-							"sid": 364905398310842,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "mouse-button-is-down",
-											"objectClass": "Mouse",
-											"sid": 935060189378443,
-											"parameters": {
-												"mouse-button": "left"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "BotaoConfirmarNome",
-											"sid": 884719507877936,
-											"parameters": {
-												"animation": "\"Pressionado\"",
-												"from": "beginning"
-											}
-										}
-									],
-									"sid": 428273090042688
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 809318921213457
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "BotaoConfirmarNome",
-											"sid": 627797716710761,
-											"parameters": {
-												"animation": "\"Sobreposto\"",
-												"from": "beginning"
-											}
-										}
-									],
-									"sid": 353365031495345
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 367344696751948
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "BotaoConfirmarNome",
-									"sid": 506291810843126,
-									"parameters": {
-										"animation": "\"Normal\"",
-										"from": "beginning"
-									}
-								},
-								{
-									"id": "set-cursor-style",
-									"objectClass": "Mouse",
-									"sid": 566208418637165,
-									"parameters": {
-										"cursor-style": "normal"
-									}
-								}
-							],
-							"sid": 804185462200179
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-object-clicked",
-									"objectClass": "Mouse",
-									"sid": 940751462959383,
-									"parameters": {
-										"mouse-button": "left",
-										"click-type": "clicked",
-										"object-clicked": "BotaoConfirmarNome"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 681612230624194,
-									"parameters": {
-										"variable": "nome",
-										"value": "TextInput.Text"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 316634877419338,
-									"parameters": {
-										"layer": "\"Escolher Nome\"",
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 181965650289069,
-									"parameters": {
-										"layer": "\"Fluxo de Texto\"",
-										"visibility": "visible"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "FluxoDeTexto",
-									"sid": 682585193430321,
-									"parameters": {
-										"instance-variable": "preparar_escrita",
-										"value": "true"
-									}
-								}
-							],
-							"sid": 843060921231250
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 821864091068678,
+							"parameters": {
+								"instance-variable": "esta_contando"
+							}
 						}
-					]
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 483712364965350,
+							"parameters": {
+								"instance-variable": "tempo",
+								"value": "Self.tempo+dt"
+							}
+						}
+					],
+					"sid": 629185896606761
 				}
 			],
-			"sid": 721263977532818
+			"sid": 733634100842372
 		}
 	],
 	"sid": 385103902642560

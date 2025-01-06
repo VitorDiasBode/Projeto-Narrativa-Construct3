@@ -1,0 +1,925 @@
+{
+	"name": "ES_EmbaralhadorDePalavras",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Event sheet 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 843173903179148
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "proxima_palavra",
+					"sid": 284413004701379
+				}
+			],
+			"sid": 553589800868509
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 286574436825205,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoResponder"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 607918108082203,
+					"parameters": {
+						"layer": "\"Desafio\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 545350545773511,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-text",
+							"objectClass": "TextInputEmbaralhadorDePalavra",
+							"sid": 972615245103248,
+							"parameters": {
+								"text": "palavra_correta",
+								"case": "case-insensitive"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "proxima_palavra",
+							"sid": 124178199030396
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TextResultado",
+							"sid": 112306729191543,
+							"parameters": {
+								"text": "\"Acertou\""
+							}
+						}
+					],
+					"sid": 501305116718975
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 584649169347734
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextResultado",
+							"sid": 445185328452135,
+							"parameters": {
+								"text": "\"Errou\""
+							}
+						}
+					],
+					"sid": 765356431804435
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextInputEmbaralhadorDePalavra",
+							"sid": 654895182504206,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 598939981340612
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 114075375799439,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoIniciarDesafio"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 761955891471848,
+					"parameters": {
+						"layer": "\"Menu de escolhas\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 516959033292185,
+					"parameters": {
+						"layer": "\"Menu de escolhas\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 547066495807159,
+					"parameters": {
+						"layer": "\"Fluxo de Texto\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 756198067486708,
+					"parameters": {
+						"seconds": "0.4"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 595077344120358,
+					"parameters": {
+						"layer": "\"Desafio\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 569058480173630,
+					"parameters": {
+						"layer": "\"Contador de Tempo\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "TextContadorDeTempo",
+					"sid": 693822276324548,
+					"parameters": {
+						"instance-variable": "esta_contando",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 667083830787877
+		},
+		{
+			"eventType": "comment",
+			"text": "---Embaralhar palavra "
+		},
+		{
+			"eventType": "variable",
+			"name": "palavra_correta",
+			"type": "string",
+			"initialValue": "seja",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 819566653824268
+		},
+		{
+			"eventType": "variable",
+			"name": "palavra_embaralhada",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 837277289804728
+		},
+		{
+			"eventType": "variable",
+			"name": "palavra_temporaria",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 148848253732588
+		},
+		{
+			"eventType": "variable",
+			"name": "index_letra",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 979726655373837
+		},
+		{
+			"functionName": "embaralhar_palavra",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 241569037819133,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 724981789465372,
+							"parameters": {
+								"first-value": "len(palavra_temporaria)",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 558881335353053,
+							"parameters": {
+								"variable": "index_letra",
+								"value": "int(random(0, len(palavra_temporaria) ) )"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 277045568828192,
+							"parameters": {
+								"variable": "palavra_embaralhada",
+								"value": "palavra_embaralhada & mid( palavra_temporaria, index_letra, 1)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 504674615015875,
+							"parameters": {
+								"variable": "palavra_temporaria",
+								"value": "replace(palavra_temporaria, right(palavra_embaralhada, 1), \"\")"
+							}
+						},
+						{
+							"callFunction": "embaralhar_palavra",
+							"sid": 988118015879304
+						}
+					],
+					"sid": 827366291377649
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 183861180332946
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextPalavraEmbaralhada",
+							"sid": 885900428214197,
+							"parameters": {
+								"text": "palavra_embaralhada"
+							}
+						}
+					],
+					"sid": 837920664046623
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Embaralhar palavra---"
+		},
+		{
+			"eventType": "variable",
+			"name": "respostas_certas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 276361631372126
+		},
+		{
+			"eventType": "comment",
+			"text": "---Proxima palavra"
+		},
+		{
+			"functionName": "proxima_palavra",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 947697999811616,
+					"parameters": {
+						"variable": "respostas_certas",
+						"value": "respostas_certas+1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 995690993022647,
+					"parameters": {
+						"variable": "palavra_embaralhada",
+						"value": "\"\""
+					}
+				}
+			],
+			"sid": 443537899637427,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 544458921191482,
+							"parameters": {
+								"variable": "respostas_certas",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 136106600067141,
+							"parameters": {
+								"variable": "palavra_correta",
+								"value": "\"seja\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 193117553235490,
+							"parameters": {
+								"variable": "palavra_temporaria",
+								"value": "\"seja\""
+							}
+						}
+					],
+					"sid": 201615285110309
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 626015113665223
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 774687069403910,
+							"parameters": {
+								"variable": "respostas_certas",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 188790322609333,
+							"parameters": {
+								"variable": "palavra_correta",
+								"value": "\"ainda\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 251158703119412,
+							"parameters": {
+								"variable": "palavra_temporaria",
+								"value": "\"ainda\""
+							}
+						}
+					],
+					"sid": 663867116134507
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 491167198669912
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 391507311906887,
+							"parameters": {
+								"variable": "respostas_certas",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 408562963975455,
+							"parameters": {
+								"variable": "palavra_correta",
+								"value": "\"melhor\"\n"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 397244346297878,
+							"parameters": {
+								"variable": "palavra_temporaria",
+								"value": "\"melhor\""
+							}
+						}
+					],
+					"sid": 577381335727079
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 994583300068705
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 707420768371549,
+							"parameters": {
+								"instance-variable": "esta_contando",
+								"value": "false"
+							}
+						},
+						{
+							"callFunction": "calcular_pontos",
+							"sid": 258000098427778
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 186173916429057,
+							"parameters": {
+								"layer": "\"Desafio\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 543715681383583,
+							"parameters": {
+								"seconds": "0.4"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 451336149717422,
+							"parameters": {
+								"layer": "\"Final\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 795884641237671
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "embaralhar_palavra",
+							"sid": 794894793490840
+						}
+					],
+					"sid": 203528490872819
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Proxima palavra---"
+		},
+		{
+			"eventType": "comment",
+			"text": "---Calcular pontos"
+		},
+		{
+			"functionName": "calcular_pontos",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 618947273415460,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 188369873909679,
+							"parameters": {
+								"instance-variable": "tempo",
+								"comparison": 4,
+								"value": "30"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "append-text",
+							"objectClass": "TextFinalDesafio",
+							"sid": 124730807746387,
+							"parameters": {
+								"text": "str(5)"
+							}
+						}
+					],
+					"sid": 940571495934339
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 686105389281633
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 903792373814547,
+							"parameters": {
+								"instance-variable": "tempo",
+								"comparison": 4,
+								"value": "15"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "append-text",
+							"objectClass": "TextFinalDesafio",
+							"sid": 371995701158187,
+							"parameters": {
+								"text": "str(25)"
+							}
+						}
+					],
+					"sid": 658839714436417
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 649898090359319
+						}
+					],
+					"actions": [
+						{
+							"id": "append-text",
+							"objectClass": "TextFinalDesafio",
+							"sid": 921768125812436,
+							"parameters": {
+								"text": "str(50)"
+							}
+						}
+					],
+					"sid": 356486124465833
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Calcular pontos---"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BotaoResponder",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 614357424265817,
+							"parameters": {
+								"layer": "\"Desafio\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 974018747444758,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 169119750452158,
+									"parameters": {
+										"object": "BotaoResponder"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 479942210285222,
+									"parameters": {
+										"cursor-style": "hand"
+									}
+								}
+							],
+							"sid": 431043684197157,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "mouse-button-is-down",
+											"objectClass": "Mouse",
+											"sid": 558959820660142,
+											"parameters": {
+												"mouse-button": "left"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "BotaoResponder",
+											"sid": 906371499339213,
+											"parameters": {
+												"animation": "\"Pressionado\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 263450124197766
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 332287030816974
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "BotaoResponder",
+											"sid": 264813638006099,
+											"parameters": {
+												"animation": "\"Sobreposto\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 780998971372919
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 896053855241481
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "BotaoResponder",
+									"sid": 892759727710862,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 349297943893159,
+									"parameters": {
+										"cursor-style": "normal"
+									}
+								}
+							],
+							"sid": 629121453799268
+						}
+					]
+				}
+			],
+			"sid": 419833580420163
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BotaoIniciarDesafio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 557258919223395,
+							"parameters": {
+								"layer": "\"Menu de escolhas\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 643694960654560,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 702664127185033,
+									"parameters": {
+										"object": "BotaoIniciarDesafio"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 939268173175130,
+									"parameters": {
+										"cursor-style": "hand"
+									}
+								}
+							],
+							"sid": 965515791309615,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "mouse-button-is-down",
+											"objectClass": "Mouse",
+											"sid": 507410596073996,
+											"parameters": {
+												"mouse-button": "left"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "BotaoIniciarDesafio",
+											"sid": 178786541489229,
+											"parameters": {
+												"animation": "\"Pressionado\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 891428962737190
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 324347365967511
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "BotaoIniciarDesafio",
+											"sid": 180578615613385,
+											"parameters": {
+												"animation": "\"Sobreposto\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 216090368896637
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 140217005150314
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "BotaoIniciarDesafio",
+									"sid": 102000356131210,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 683530777218479,
+									"parameters": {
+										"cursor-style": "normal"
+									}
+								}
+							],
+							"sid": 790026170433080
+						}
+					]
+				}
+			],
+			"sid": 945569340603816
+		}
+	],
+	"sid": 144640237255044
+}

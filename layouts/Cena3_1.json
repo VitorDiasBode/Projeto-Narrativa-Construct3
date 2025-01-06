@@ -172,7 +172,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Tentar decifrar o símbolo",
 						"enable-bbcode": true,
@@ -228,7 +228,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Ignorar o símbolo e seguir para as ruínas",
 						"enable-bbcode": true,

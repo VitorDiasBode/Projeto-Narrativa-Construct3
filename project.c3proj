@@ -39,16 +39,18 @@
 	"objectTypes": {
 		"items": [
 			"Mouse",
-			"Text"
+			"TextPadrao"
 		],
 		"subfolders": [
 			{
 				"items": [
 					"Botao",
-					"BotaoConfirmarNome"
+					"BotaoConfirmarNome",
+					"BotaoResponder",
+					"BotaoIniciarDesafio"
 				],
 				"subfolders": [],
-				"name": "Botaos"
+				"name": "Botoes"
 			},
 			{
 				"items": [
@@ -57,7 +59,7 @@
 				"subfolders": [
 					{
 						"items": [
-							"TextInput",
+							"TextInputEscolherNome",
 							"FundoDoTextoMenor"
 						],
 						"subfolders": [],
@@ -73,6 +75,24 @@
 				],
 				"subfolders": [],
 				"name": "Fluxo de Texto"
+			},
+			{
+				"items": [
+					"TextInputEmbaralhadorDePalavra",
+					"TextPalavraEmbaralhada",
+					"TextResultado",
+					"TextFinalDesafio"
+				],
+				"subfolders": [],
+				"name": "Embaralhador de palavra"
+			},
+			{
+				"items": [
+					"TextContadorDeTempo",
+					"FundoContadorDeTempo"
+				],
+				"subfolders": [],
+				"name": "Contador de Tempo"
 			}
 		]
 	},
@@ -90,13 +110,15 @@
 			"Cena2_1",
 			"Cena3",
 			"Cena3_1",
-			"Cena2_2"
+			"Cena2_2",
+			"EmbaralhadorDePalavras"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"ES_EmbaralhadorDePalavras"
 		],
 		"subfolders": []
 	},

@@ -172,7 +172,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Explorar a vila misteriosa",
 						"enable-bbcode": true,
@@ -228,7 +228,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Investigar a floresta encantada",
 						"enable-bbcode": true,
@@ -456,7 +456,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "TextInput",
+					"type": "TextInputEscolherNome",
 					"properties": {
 						"text": "",
 						"placeholder": "",
@@ -540,7 +540,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Confirmar",
 						"enable-bbcode": true,
@@ -636,7 +636,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Vamos conhecer a história de um explorador!!!\n\nQual o nome dele ?",
 						"enable-bbcode": true,
