@@ -32,8 +32,8 @@
 					"world": {
 						"x": 512,
 						"y": 363,
-						"width": 1051.9736154301477,
-						"height": 748.070126528105,
+						"width": 748.070126528105,
+						"height": 438.3223397625615,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -94,7 +94,10 @@
 					"sid": 267822236223890,
 					"tags": "",
 					"instanceVariables": {
-						"destino": ""
+						"destino": "",
+						"desbloquear_cena_extra": false,
+						"botao_extra": false,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -136,7 +139,10 @@
 					"sid": 567182721639179,
 					"tags": "",
 					"instanceVariables": {
-						"destino": ""
+						"destino": "",
+						"desbloquear_cena_extra": false,
+						"botao_extra": false,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {

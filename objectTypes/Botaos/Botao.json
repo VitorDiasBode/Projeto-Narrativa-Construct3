@@ -10,6 +10,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 490029848446958
+		},
+		{
+			"name": "desbloquear_cena_extra",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 459823707777109
+		},
+		{
+			"name": "botao_extra",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 489091806847763
+		},
+		{
+			"name": "desabilitado",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 887811070590966
 		}
 	],
 	"behaviorTypes": [],

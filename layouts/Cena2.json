@@ -31,9 +31,9 @@
 					"locked": false,
 					"world": {
 						"x": 512,
-						"y": 363,
-						"width": 1051.9736154301477,
-						"height": 748.070126528105,
+						"y": 300,
+						"width": 1024,
+						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -94,7 +94,10 @@
 					"sid": 859813850776149,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_1"
+						"destino": "Cena2_1",
+						"desbloquear_cena_extra": false,
+						"botao_extra": false,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -136,7 +139,10 @@
 					"sid": 339363756273793,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_1"
+						"destino": "Cena2_1",
+						"desbloquear_cena_extra": false,
+						"botao_extra": false,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
