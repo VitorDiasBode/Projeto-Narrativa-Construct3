@@ -12,6 +12,16 @@
 			"sid": 960811694522922
 		},
 		{
+			"eventType": "variable",
+			"name": "cena_extra_bloqueada",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 458313462358893
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Botao",
@@ -22,35 +32,64 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "cursor-is-over-object",
-							"objectClass": "Mouse",
-							"sid": 515198032409972,
+							"id": "on-created",
+							"objectClass": "Botao",
+							"sid": 336634240911296
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Botao",
+							"sid": 306815293066688,
 							"parameters": {
-								"object": "Botao"
+								"instance-variable": "botao_extra"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 159269971572724,
+							"parameters": {
+								"variable": "cena_extra_bloqueada"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-cursor-style",
-							"objectClass": "Mouse",
-							"sid": 889927477062864,
+							"id": "set-boolean-instvar",
+							"objectClass": "Botao",
+							"sid": 926152163696248,
 							"parameters": {
-								"cursor-style": "hand"
+								"instance-variable": "desabilitado",
+								"value": "true"
 							}
 						}
 					],
-					"sid": 877445176696643,
+					"sid": 506737566166559
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 567323473355611,
+							"parameters": {
+								"object": "Botao"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 211755176666218,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "mouse-button-is-down",
-									"objectClass": "Mouse",
-									"sid": 150998188284286,
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Botao",
+									"sid": 678602242884029,
 									"parameters": {
-										"mouse-button": "left"
+										"instance-variable": "desabilitado"
 									}
 								}
 							],
@@ -58,14 +97,14 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Botao",
-									"sid": 995071284361742,
+									"sid": 252395854879205,
 									"parameters": {
-										"animation": "\"Pressionado\"",
+										"animation": "\"Desabilitado\"",
 										"from": "beginning"
 									}
 								}
 							],
-							"sid": 348364254777739
+							"sid": 855406785856085
 						},
 						{
 							"eventType": "block",
@@ -73,53 +112,114 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 916727115472815
+									"sid": 545804554057078
+								},
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 920716470788724,
+									"parameters": {
+										"object": "Botao"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 127628889006241,
+									"parameters": {
+										"cursor-style": "hand"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "TelaDeFundo",
+									"sid": 906809758860063
+								}
+							],
+							"sid": 775560499644288,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "mouse-button-is-down",
+											"objectClass": "Mouse",
+											"sid": 737526443027553,
+											"parameters": {
+												"mouse-button": "left"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Botao",
+											"sid": 140797617518787,
+											"parameters": {
+												"animation": "\"Pressionado\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 910767484609176
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 909703109118804
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Botao",
+											"sid": 549274291720759,
+											"parameters": {
+												"animation": "\"Sobreposto\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 945244193372335
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 953314718288257
 								}
 							],
 							"actions": [
 								{
 									"id": "set-animation",
 									"objectClass": "Botao",
-									"sid": 469430700676579,
+									"sid": 127184945214806,
 									"parameters": {
-										"animation": "\"Sobreposto\"",
+										"animation": "\"Normal\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 729282404226576,
+									"parameters": {
+										"cursor-style": "normal"
 									}
 								}
 							],
-							"sid": 138992395362846
+							"sid": 984835989339331
 						}
 					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 552603159820606
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "Botao",
-							"sid": 178213593198797,
-							"parameters": {
-								"animation": "\"Normal\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-cursor-style",
-							"objectClass": "Mouse",
-							"sid": 149927552843883,
-							"parameters": {
-								"cursor-style": "normal"
-							}
-						}
-					],
-					"sid": 806587845491765
 				},
 				{
 					"eventType": "block",
@@ -142,25 +242,67 @@
 								{
 									"id": "on-object-clicked",
 									"objectClass": "Mouse",
-									"sid": 342151098574387,
+									"sid": 389545825894740,
 									"parameters": {
 										"mouse-button": "left",
-										"click-type": "double-clicked",
+										"click-type": "clicked",
 										"object-clicked": "Botao"
 									}
-								}
-							],
-							"actions": [
+								},
 								{
-									"id": "go-to-layout-by-name",
-									"objectClass": "System",
-									"sid": 105931830500669,
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Botao",
+									"sid": 256477769615157,
 									"parameters": {
-										"layout": "Botao.destino"
-									}
+										"instance-variable": "desabilitado"
+									},
+									"isInverted": true
 								}
 							],
-							"sid": 445192622342186
+							"actions": [],
+							"sid": 445192622342186,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Botao",
+											"sid": 472041012230632,
+											"parameters": {
+												"instance-variable": "desbloquear_cena_extra"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 305157486180163,
+											"parameters": {
+												"variable": "cena_extra_bloqueada",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 213971013538235
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "go-to-layout-by-name",
+											"objectClass": "System",
+											"sid": 751206643828669,
+											"parameters": {
+												"layout": "Botao.destino"
+											}
+										}
+									],
+									"sid": 386573180768120
+								}
+							]
 						}
 					]
 				}
@@ -436,7 +578,7 @@
 								{
 									"id": "wait",
 									"objectClass": "System",
-									"sid": 233649721144478,
+									"sid": 648377286188844,
 									"parameters": {
 										"seconds": "0.4"
 									}

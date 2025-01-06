@@ -94,7 +94,10 @@
 					"sid": 391204737326160,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_2"
+						"destino": "Cena2_2",
+						"desbloquear_cena_extra": false,
+						"botao_extra": false,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -136,7 +139,10 @@
 					"sid": 327332310935479,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_2"
+						"destino": "Cena2_2",
+						"desbloquear_cena_extra": false,
+						"botao_extra": false,
+						"desabilitado": false
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
