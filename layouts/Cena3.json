@@ -172,7 +172,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Seguir a trilha iluminada",
 						"enable-bbcode": true,
@@ -228,7 +228,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Entrar no bosque escuro",
 						"enable-bbcode": true,

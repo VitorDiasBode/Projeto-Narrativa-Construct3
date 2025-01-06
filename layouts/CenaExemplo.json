@@ -172,7 +172,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Botao 1",
 						"enable-bbcode": true,
@@ -228,7 +228,7 @@
 					}
 				},
 				{
-					"type": "Text",
+					"type": "TextPadrao",
 					"properties": {
 						"text": "Botao 2",
 						"enable-bbcode": true,

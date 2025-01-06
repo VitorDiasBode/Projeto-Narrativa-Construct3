@@ -2,6 +2,115 @@
 	"name": "ES_EmbaralhadorDePalavras",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Event sheet 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 843173903179148
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "proxima_palavra",
+					"sid": 284413004701379
+				}
+			],
+			"sid": 553589800868509
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 286574436825205,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoResponder"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 545350545773511,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-text",
+							"objectClass": "TextInputEmbaralhadorDePalavra",
+							"sid": 972615245103248,
+							"parameters": {
+								"text": "palavra_correta",
+								"case": "case-insensitive"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "proxima_palavra",
+							"sid": 124178199030396
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TextResultado",
+							"sid": 112306729191543,
+							"parameters": {
+								"text": "\"Acertou\""
+							}
+						}
+					],
+					"sid": 501305116718975
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 584649169347734
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextResultado",
+							"sid": 445185328452135,
+							"parameters": {
+								"text": "\"Errou\""
+							}
+						}
+					],
+					"sid": 765356431804435
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextInputEmbaralhadorDePalavra",
+							"sid": 654895182504206,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 598939981340612
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "---Embaralhar palavra "
+		},
+		{
 			"eventType": "variable",
 			"name": "palavra_correta",
 			"type": "string",
@@ -9,27 +118,27 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 322869624097643
+			"sid": 819566653824268
 		},
 		{
 			"eventType": "variable",
-			"name": "palavra",
+			"name": "palavra_embaralhada",
 			"type": "string",
 			"initialValue": "",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 357334880800244
+			"sid": 837277289804728
 		},
 		{
 			"eventType": "variable",
-			"name": "letras_escritas",
-			"type": "number",
-			"initialValue": "0",
+			"name": "palavra_temporaria",
+			"type": "string",
+			"initialValue": "",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 254013577096180
+			"sid": 148848253732588
 		},
 		{
 			"eventType": "variable",
@@ -39,126 +148,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 176973088012179
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 252558939208639
-				}
-			],
-			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "Text",
-					"sid": 719288734013801,
-					"parameters": {
-						"text": "palavra_correta"
-					}
-				},
-				{
-					"id": "append-text",
-					"objectClass": "Text",
-					"sid": 573834207486766,
-					"parameters": {
-						"text": "newline&\"---\""
-					}
-				}
-			],
-			"sid": 537157468302771,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-click",
-					"objectClass": "Mouse",
-					"sid": 344576350506659,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
-					}
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 701403503177253,
-					"parameters": {
-						"first-value": "len(palavra_correta)",
-						"comparison": 4,
-						"second-value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 127643022881244,
-					"parameters": {
-						"variable": "index_letra",
-						"value": "int(random(0, len(palavra_correta) ) )"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 156735951275054,
-					"parameters": {
-						"variable": "palavra",
-						"value": "palavra & mid( palavra_correta, index_letra, 1)"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 405123446459760,
-					"parameters": {
-						"variable": "palavra_correta",
-						"value": "replace(palavra_correta, right(palavra, 1), \"\")"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 970529098922102,
-					"parameters": {
-						"variable": "letras_escritas",
-						"value": "letras_escritas+1"
-					}
-				},
-				{
-					"id": "append-text",
-					"objectClass": "Text",
-					"sid": 279895236650268,
-					"parameters": {
-						"text": "newline & palavra & \" / \" &palavra_correta & newline"
-					}
-				}
-			],
-			"sid": 298208893391272,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 724877484277879
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "embaralhar_palavra",
-					"sid": 470487239042516
-				}
-			],
-			"sid": 414653749500482
+			"sid": 979726655373837
 		},
 		{
 			"functionName": "embaralhar_palavra",
@@ -171,7 +161,7 @@
 			"eventType": "function-block",
 			"conditions": [],
 			"actions": [],
-			"sid": 856194397731987,
+			"sid": 241569037819133,
 			"children": [
 				{
 					"eventType": "block",
@@ -179,9 +169,9 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 216204198938047,
+							"sid": 724981789465372,
 							"parameters": {
-								"first-value": "len(palavra_correta)",
+								"first-value": "len(palavra_temporaria)",
 								"comparison": 4,
 								"second-value": "0"
 							}
@@ -191,64 +181,439 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 573795486878628,
+							"sid": 558881335353053,
 							"parameters": {
 								"variable": "index_letra",
-								"value": "int(random(0, len(palavra_correta) ) )"
+								"value": "int(random(0, len(palavra_temporaria) ) )"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 154413749969999,
+							"sid": 277045568828192,
 							"parameters": {
-								"variable": "palavra",
-								"value": "palavra & mid( palavra_correta, index_letra, 1)"
+								"variable": "palavra_embaralhada",
+								"value": "palavra_embaralhada & mid( palavra_temporaria, index_letra, 1)"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 388123220599772,
+							"sid": 504674615015875,
 							"parameters": {
-								"variable": "palavra_correta",
-								"value": "replace(palavra_correta, right(palavra, 1), \"\")"
+								"variable": "palavra_temporaria",
+								"value": "replace(palavra_temporaria, right(palavra_embaralhada, 1), \"\")"
 							}
 						},
 						{
-							"id": "set-eventvar-value",
+							"callFunction": "embaralhar_palavra",
+							"sid": 988118015879304
+						}
+					],
+					"sid": 827366291377649
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
 							"objectClass": "System",
-							"sid": 737506446425442,
+							"sid": 183861180332946
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextPalavraEmbaralhada",
+							"sid": 885900428214197,
 							"parameters": {
-								"variable": "letras_escritas",
-								"value": "letras_escritas+1"
+								"text": "palavra_embaralhada"
 							}
 						}
 					],
-					"sid": 979819758305268
+					"sid": 837920664046623
 				}
 			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Embaralhar palavra---"
+		},
+		{
+			"eventType": "variable",
+			"name": "respostas_certas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 276361631372126
+		},
+		{
+			"eventType": "comment",
+			"text": "---Proxima palavra"
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 991742768521247
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 441914299225523,
+					"parameters": {
+						"mouse-button": "right",
+						"click-type": "clicked"
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-text",
-					"objectClass": "Text",
-					"sid": 475460596381540,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 457252840428129,
 					"parameters": {
-						"text": "palavra"
+						"variable": "respostas_certas",
+						"value": "3"
 					}
 				}
 			],
-			"sid": 964123703217752
+			"sid": 851449614737992
+		},
+		{
+			"functionName": "proxima_palavra",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 947697999811616,
+					"parameters": {
+						"variable": "respostas_certas",
+						"value": "respostas_certas+1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 995690993022647,
+					"parameters": {
+						"variable": "palavra_embaralhada",
+						"value": "\"\""
+					}
+				}
+			],
+			"sid": 443537899637427,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 544458921191482,
+							"parameters": {
+								"variable": "respostas_certas",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 136106600067141,
+							"parameters": {
+								"variable": "palavra_correta",
+								"value": "\"seja\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 193117553235490,
+							"parameters": {
+								"variable": "palavra_temporaria",
+								"value": "\"seja\""
+							}
+						}
+					],
+					"sid": 201615285110309
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 626015113665223
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 774687069403910,
+							"parameters": {
+								"variable": "respostas_certas",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 188790322609333,
+							"parameters": {
+								"variable": "palavra_correta",
+								"value": "\"ainda\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 251158703119412,
+							"parameters": {
+								"variable": "palavra_temporaria",
+								"value": "\"ainda\""
+							}
+						}
+					],
+					"sid": 663867116134507
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 491167198669912
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 391507311906887,
+							"parameters": {
+								"variable": "respostas_certas",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 408562963975455,
+							"parameters": {
+								"variable": "palavra_correta",
+								"value": "\"melhor\"\n"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 397244346297878,
+							"parameters": {
+								"variable": "palavra_temporaria",
+								"value": "\"melhor\""
+							}
+						}
+					],
+					"sid": 577381335727079
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 994583300068705
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 186173916429057,
+							"parameters": {
+								"layer": "\"Desafio\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 543715681383583,
+							"parameters": {
+								"seconds": "0.4"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 111287530250462,
+							"parameters": {
+								"layer": "\"Menu de escolhas\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 795884641237671
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "embaralhar_palavra",
+							"sid": 794894793490840
+						}
+					],
+					"sid": 203528490872819
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Proxima palavra---"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BotaoResponder",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 614357424265817,
+							"parameters": {
+								"layer": "\"Desafio\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 974018747444758,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 169119750452158,
+									"parameters": {
+										"object": "BotaoResponder"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 479942210285222,
+									"parameters": {
+										"cursor-style": "hand"
+									}
+								}
+							],
+							"sid": 431043684197157,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "mouse-button-is-down",
+											"objectClass": "Mouse",
+											"sid": 558959820660142,
+											"parameters": {
+												"mouse-button": "left"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "BotaoResponder",
+											"sid": 906371499339213,
+											"parameters": {
+												"animation": "\"Pressionado\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 263450124197766
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 332287030816974
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "BotaoResponder",
+											"sid": 264813638006099,
+											"parameters": {
+												"animation": "\"Sobreposto\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 780998971372919
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 896053855241481
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "BotaoResponder",
+									"sid": 892759727710862,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 349297943893159,
+									"parameters": {
+										"cursor-style": "normal"
+									}
+								}
+							],
+							"sid": 629121453799268
+						}
+					]
+				}
+			],
+			"sid": 419833580420163
 		}
 	],
 	"sid": 144640237255044
