@@ -811,6 +811,62 @@
 				}
 			],
 			"sid": 774089783257646
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ContadorDeTempo",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 199226705535859
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 798063614033208,
+							"parameters": {
+								"text": "str( int( Self.tempo) )"
+							}
+						}
+					],
+					"sid": 645194144248580
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 821864091068678,
+							"parameters": {
+								"instance-variable": "esta_contando"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 483712364965350,
+							"parameters": {
+								"instance-variable": "tempo",
+								"value": "Self.tempo+dt"
+							}
+						}
+					],
+					"sid": 629185896606761
+				}
+			],
+			"sid": 733634100842372
 		}
 	],
 	"sid": 385103902642560

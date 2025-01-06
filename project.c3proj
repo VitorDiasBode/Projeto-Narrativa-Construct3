@@ -46,7 +46,8 @@
 				"items": [
 					"Botao",
 					"BotaoConfirmarNome",
-					"BotaoResponder"
+					"BotaoResponder",
+					"BotaoIniciarDesafio"
 				],
 				"subfolders": [],
 				"name": "Botoes"
@@ -79,10 +80,19 @@
 				"items": [
 					"TextInputEmbaralhadorDePalavra",
 					"TextPalavraEmbaralhada",
-					"TextResultado"
+					"TextResultado",
+					"TextFinalDesafio"
 				],
 				"subfolders": [],
 				"name": "Embaralhador de palavra"
+			},
+			{
+				"items": [
+					"TextContadorDeTempo",
+					"FundoContadorDeTempo"
+				],
+				"subfolders": [],
+				"name": "Contador de Tempo"
 			}
 		]
 	},
