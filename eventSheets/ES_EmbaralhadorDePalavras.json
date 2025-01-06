@@ -1,0 +1,255 @@
+{
+	"name": "ES_EmbaralhadorDePalavras",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "palavra_correta",
+			"type": "string",
+			"initialValue": "seja",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 322869624097643
+		},
+		{
+			"eventType": "variable",
+			"name": "palavra",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 357334880800244
+		},
+		{
+			"eventType": "variable",
+			"name": "letras_escritas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 254013577096180
+		},
+		{
+			"eventType": "variable",
+			"name": "index_letra",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 176973088012179
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 252558939208639
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 719288734013801,
+					"parameters": {
+						"text": "palavra_correta"
+					}
+				},
+				{
+					"id": "append-text",
+					"objectClass": "Text",
+					"sid": 573834207486766,
+					"parameters": {
+						"text": "newline&\"---\""
+					}
+				}
+			],
+			"sid": 537157468302771,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 344576350506659,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 701403503177253,
+					"parameters": {
+						"first-value": "len(palavra_correta)",
+						"comparison": 4,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 127643022881244,
+					"parameters": {
+						"variable": "index_letra",
+						"value": "int(random(0, len(palavra_correta) ) )"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 156735951275054,
+					"parameters": {
+						"variable": "palavra",
+						"value": "palavra & mid( palavra_correta, index_letra, 1)"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 405123446459760,
+					"parameters": {
+						"variable": "palavra_correta",
+						"value": "replace(palavra_correta, right(palavra, 1), \"\")"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 970529098922102,
+					"parameters": {
+						"variable": "letras_escritas",
+						"value": "letras_escritas+1"
+					}
+				},
+				{
+					"id": "append-text",
+					"objectClass": "Text",
+					"sid": 279895236650268,
+					"parameters": {
+						"text": "newline & palavra & \" / \" &palavra_correta & newline"
+					}
+				}
+			],
+			"sid": 298208893391272,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 724877484277879
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "embaralhar_palavra",
+					"sid": 470487239042516
+				}
+			],
+			"sid": 414653749500482
+		},
+		{
+			"functionName": "embaralhar_palavra",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 856194397731987,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 216204198938047,
+							"parameters": {
+								"first-value": "len(palavra_correta)",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 573795486878628,
+							"parameters": {
+								"variable": "index_letra",
+								"value": "int(random(0, len(palavra_correta) ) )"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 154413749969999,
+							"parameters": {
+								"variable": "palavra",
+								"value": "palavra & mid( palavra_correta, index_letra, 1)"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 388123220599772,
+							"parameters": {
+								"variable": "palavra_correta",
+								"value": "replace(palavra_correta, right(palavra, 1), \"\")"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 737506446425442,
+							"parameters": {
+								"variable": "letras_escritas",
+								"value": "letras_escritas+1"
+							}
+						}
+					],
+					"sid": 979819758305268
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 991742768521247
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 475460596381540,
+					"parameters": {
+						"text": "palavra"
+					}
+				}
+			],
+			"sid": 964123703217752
+		}
+	],
+	"sid": 144640237255044
+}
