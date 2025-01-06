@@ -1,0 +1,304 @@
+{
+	"name": "ES_CriadorDeFrase",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 636399125323373,
+					"parameters": {
+						"object": "TextPalavraDaFrase"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 972671515479728,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "TextPalavraDaFrase",
+							"sid": 998901291203278,
+							"parameters": {
+								"instance-variable": "ativa"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "TextPalavraDaFrase",
+							"sid": 592517572438495,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 509548109152500
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 678840583039743
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "TextPalavraDaFrase",
+							"sid": 518001819373396,
+							"parameters": {
+								"opacity": "20"
+							}
+						}
+					],
+					"sid": 763213683079900
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 946010235574320,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 123188930837553,
+					"parameters": {
+						"object": "BotaoPalavraEmbaralhada"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "TextPalavraDaFrase",
+					"sid": 546067738441407,
+					"parameters": {
+						"instance-variable": "ativa",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 552596631063852,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 905388864894664,
+							"parameters": {
+								"object": "TextPalavraDaFrase"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "TextPalavraDaFrase",
+							"sid": 415708180261379,
+							"parameters": {
+								"instance-variable": "ativa",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 627165078742590
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 833559324144357,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoPalavraEmbaralhada"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 524607882050668,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 520935941177623,
+							"parameters": {
+								"object": "TextPalavraDaFrase",
+								"expression": "TextPalavraDaFrase.ativa"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextPalavraDaFrase",
+							"sid": 997772236655599,
+							"parameters": {
+								"text": "BotaoPalavraEmbaralhada.palavra"
+							}
+						}
+					],
+					"sid": 551692520905406
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BotaoPalavraEmbaralhada",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 883331158745822,
+							"parameters": {
+								"object": "Botao"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 551633863380417,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "cursor-is-over-object",
+									"objectClass": "Mouse",
+									"sid": 382770179207221,
+									"parameters": {
+										"object": "BotaoPalavraEmbaralhada"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 170453375804936,
+									"parameters": {
+										"cursor-style": "hand"
+									}
+								}
+							],
+							"sid": 111751950529601,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "mouse-button-is-down",
+											"objectClass": "Mouse",
+											"sid": 105198050012060,
+											"parameters": {
+												"mouse-button": "left"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "BotaoPalavraEmbaralhada",
+											"sid": 252200878758699,
+											"parameters": {
+												"animation": "\"Pressionado\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 407708364368783
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 512890173733840
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "BotaoPalavraEmbaralhada",
+											"sid": 563804542667588,
+											"parameters": {
+												"animation": "\"Sobreposto\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 563311700934040
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 388624268023621
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "BotaoPalavraEmbaralhada",
+									"sid": 245730909202057,
+									"parameters": {
+										"animation": "\"Normal\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-cursor-style",
+									"objectClass": "Mouse",
+									"sid": 368225259310998,
+									"parameters": {
+										"cursor-style": "normal"
+									}
+								}
+							],
+							"sid": 995881333475140
+						}
+					]
+				}
+			],
+			"sid": 740521938046855
+		}
+	],
+	"sid": 809212052281758
+}

@@ -47,7 +47,8 @@
 					"Botao",
 					"BotaoConfirmarNome",
 					"BotaoResponder",
-					"BotaoIniciarDesafio"
+					"BotaoIniciarDesafio",
+					"BotaoPalavraEmbaralhada"
 				],
 				"subfolders": [],
 				"name": "Botoes"
@@ -93,6 +94,13 @@
 				],
 				"subfolders": [],
 				"name": "Contador de Tempo"
+			},
+			{
+				"items": [
+					"TextPalavraDaFrase"
+				],
+				"subfolders": [],
+				"name": "Criador de frase"
 			}
 		]
 	},
@@ -111,14 +119,16 @@
 			"Cena3",
 			"Cena3_1",
 			"Cena2_2",
-			"EmbaralhadorDePalavras"
+			"EmbaralhadorDePalavras",
+			"CriadorDeFrase"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Event sheet 1",
-			"ES_EmbaralhadorDePalavras"
+			"ES_EmbaralhadorDePalavras",
+			"ES_CriadorDeFrase"
 		],
 		"subfolders": []
 	},

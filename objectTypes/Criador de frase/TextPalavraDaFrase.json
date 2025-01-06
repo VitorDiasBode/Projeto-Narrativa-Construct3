@@ -1,0 +1,17 @@
+{
+	"name": "TextPalavraDaFrase",
+	"plugin-id": "Text",
+	"sid": 200073088943525,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "ativa",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 245375766923853
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
