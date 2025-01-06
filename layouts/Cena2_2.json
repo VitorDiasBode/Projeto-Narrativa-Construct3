@@ -94,7 +94,7 @@
 					"sid": 926960456607425,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_1",
+						"destino": "Cena2Extra",
 						"desbloquear_cena_extra": false,
 						"botao_extra": true,
 						"desabilitado": false
@@ -139,7 +139,7 @@
 					"sid": 819740011261331,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_2",
+						"destino": "CenaFinal",
 						"desbloquear_cena_extra": false,
 						"botao_extra": false,
 						"desabilitado": false
