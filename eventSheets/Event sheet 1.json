@@ -131,11 +131,6 @@
 									"parameters": {
 										"cursor-style": "hand"
 									}
-								},
-								{
-									"id": "destroy",
-									"objectClass": "TelaDeFundo",
-									"sid": 906809758860063
 								}
 							],
 							"sid": 775560499644288,
