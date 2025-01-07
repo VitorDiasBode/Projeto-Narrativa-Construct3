@@ -1,5 +1,5 @@
 {
-	"name": "Cena3_1",
+	"name": "CenaFinal",
 	"layers": [
 		{
 			"name": "Tela de Fundo",
@@ -10,18 +10,18 @@
 					"type": "TelaDeFundo",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Cena2_1",
+						"initial-animation": "FinalPositivo",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 55,
-					"sid": 906334194225765,
+					"uid": 115,
+					"sid": 158016338818045,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 906334194225765,
+						"sid": 158016338818045,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -47,7 +47,7 @@
 					}
 				}
 			],
-			"sid": 231976015485099,
+			"sid": 434468581787262,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -77,31 +77,26 @@
 			"global": false
 		},
 		{
-			"name": "Menu de escolhas",
+			"name": "Positivo",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Botao",
+					"type": "FundoDoTexto",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Normal",
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 56,
-					"sid": 391204737326160,
+					"uid": 143,
+					"sid": 441569687999408,
 					"tags": "",
-					"instanceVariables": {
-						"destino": "Cena2_2",
-						"desbloquear_cena_extra": false,
-						"botao_extra": false,
-						"desabilitado": false
-					},
+					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 391204737326160,
+						"sid": 441569687999408,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -110,10 +105,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 252,
-						"y": 458,
-						"width": 320,
-						"height": 50,
+						"x": 507,
+						"y": 214,
+						"width": 420,
+						"height": 320,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -127,26 +122,43 @@
 					}
 				},
 				{
-					"type": "Botao",
+					"type": "FluxoDeTexto",
 					"properties": {
+						"text": "Após toda a jornada, {nome do personagem} se encontra diante do desfecho de sua história. Suas escolhas e ações trouxeram luz onde havia escuridão e esperança onde havia dúvida. Com coragem e determinação, {nome do personagem} superou os desafios, construindo um caminho repleto de significado e propósito. O futuro agora é brilhante, e sua história será lembrada como um exemplo de perseverança e sabedoria.\nParabéns! Suas decisões levaram {nome do personagem} a um final de sucesso, mostrando o poder de escolhas bem feitas.",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
-						"initial-animation": "Normal",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"origin": "top-left",
+						"read-aloud": false
 					},
-					"uid": 57,
-					"sid": 327332310935479,
+					"uid": 144,
+					"sid": 848951124378043,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_2",
-						"desbloquear_cena_extra": false,
-						"botao_extra": false,
-						"desabilitado": false
+						"texto_final": "",
+						"tempo_para_escrever": 0,
+						"escrevendo": false,
+						"letras_escritas": 0,
+						"preparar_escrita": true
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 327332310935479,
+						"sid": 848951124378043,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -155,122 +167,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 252,
-						"y": 518,
-						"width": 320,
-						"height": 50,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TextPadrao",
-					"properties": {
-						"text": "Tentar decifrar o símbolo",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 12,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 58,
-					"sid": 513668553657496,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 513668553657496,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 126,
-						"y": 443.3011969739933,
-						"width": 250,
-						"height": 30,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TextPadrao",
-					"properties": {
-						"text": "Ignorar o símbolo e seguir para as ruínas",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 12,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 59,
-					"sid": 909667171148778,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 909667171148778,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 95,
-						"y": 503.31661165060325,
-						"width": 317,
-						"height": 30,
+						"x": 308,
+						"y": 63,
+						"width": 400,
+						"height": 300,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -284,7 +184,7 @@
 					}
 				}
 			],
-			"sid": 550605075798116,
+			"sid": 653819128757368,
 			"effectTypes": [],
 			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
@@ -314,7 +214,7 @@
 			"global": false
 		},
 		{
-			"name": "Fluxo de Texto",
+			"name": "Negativo",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -327,13 +227,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 60,
-					"sid": 127072346068613,
+					"uid": 116,
+					"sid": 488263689577096,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 127072346068613,
+						"sid": 488263689577096,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -342,8 +242,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 252,
-						"y": 225,
+						"x": 507,
+						"y": 214,
 						"width": 420,
 						"height": 320,
 						"originX": 0.5,
@@ -361,7 +261,7 @@
 				{
 					"type": "FluxoDeTexto",
 					"properties": {
-						"text": "{nome do personagem} se aproxima do símbolo no chão. As linhas brilhavam fracamente enquanto ele o examinava. Uma voz ecoa ao longe: 'Escolhas definem o futuro.' O símbolo parece pedir algo mais... mas o que? Por outro lado, as ruínas ao norte chamam com um sussurro mais forte. O que {nome do personagem} fará?",
+						"text": "A jornada de {nome do personagem} foi repleta de escolhas difíceis e momentos desafiadores. Apesar de sua coragem, nem todas as decisões trouxeram os resultados desejados. O caminho percorrido revelou lições importantes, mas também mostrou que, às vezes, o aprendizado vem dos erros e não das conquistas.\nEmbora este capítulo não tenha tido o desfecho esperado, o futuro ainda reserva novas oportunidades para recomeçar e seguir em frente. Que {nome do personagem} use tudo o que aprendeu para construir uma nova história.",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -383,8 +283,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 61,
-					"sid": 785505115201502,
+					"uid": 117,
+					"sid": 513855766273923,
 					"tags": "",
 					"instanceVariables": {
 						"texto_final": "",
@@ -395,7 +295,7 @@
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 785505115201502,
+						"sid": 513855766273923,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -404,8 +304,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 52,
-						"y": 74,
+						"x": 308,
+						"y": 63,
 						"width": 400,
 						"height": 300,
 						"originX": 0,
@@ -421,9 +321,140 @@
 					}
 				}
 			],
-			"sid": 122717006113424,
+			"sid": 973145423699760,
 			"effectTypes": [],
-			"isInitiallyVisible": true,
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Menu de escolhas",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BotaoIniciarDesafio",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Normal",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 118,
+					"sid": 222117607743168,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 222117607743168,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 512,
+						"y": 458,
+						"width": 320,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "TextPadrao",
+					"properties": {
+						"text": "Fim !!!",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 119,
+					"sid": 782424158221707,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 782424158221707,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 390,
+						"y": 443,
+						"width": 250,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.282888666961293,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 453273991801517,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
 			"color": [
@@ -455,7 +486,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 641835589996846,
+	"sid": 467061886859659,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 2048,

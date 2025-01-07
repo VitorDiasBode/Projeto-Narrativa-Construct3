@@ -22,6 +22,16 @@
 			"sid": 458313462358893
 		},
 		{
+			"eventType": "variable",
+			"name": "pontos",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 292254290035608
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -565,6 +575,129 @@
 								}
 							],
 							"sid": 883383052324309
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 405901681899368
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 340303831711170,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"CenaFinal\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 934058941293023,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 273693496261354,
+											"parameters": {
+												"variable": "pontos",
+												"comparison": 2,
+												"value": "60"
+											}
+										},
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 335105065757227,
+											"parameters": {
+												"object": "FluxoDeTexto",
+												"expression": "FluxoDeTexto.LayerName",
+												"comparison": 0,
+												"value": "\"Positivo\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "FluxoDeTexto",
+											"sid": 435055806272294
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "TelaDeFundo",
+											"sid": 731737478885875,
+											"parameters": {
+												"animation": "\"FinalNegativo\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 735975746960186,
+											"parameters": {
+												"layer": "\"Negativo\"",
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 725447658941934
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 964668864431117
+										},
+										{
+											"id": "pick-by-comparison",
+											"objectClass": "System",
+											"sid": 152906481218092,
+											"parameters": {
+												"object": "FluxoDeTexto",
+												"expression": "FluxoDeTexto.LayerName",
+												"comparison": 0,
+												"value": "\"Negativo\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "FluxoDeTexto",
+											"sid": 281628884820411
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "TelaDeFundo",
+											"sid": 444380014178627,
+											"parameters": {
+												"animation": "\"FinalPositivo\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 308126650664340,
+											"parameters": {
+												"layer": "\"Positivo\"",
+												"visibility": "visible"
+											}
+										}
+									],
+									"sid": 212316271537334
+								}
+							]
 						}
 					]
 				},
@@ -867,16 +1000,6 @@
 				}
 			],
 			"sid": 733634100842372
-		},
-		{
-			"eventType": "variable",
-			"name": "pontos",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 194761465606219
 		},
 		{
 			"eventType": "group",
