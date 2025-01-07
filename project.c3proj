@@ -39,16 +39,14 @@
 	"objectTypes": {
 		"items": [
 			"Mouse",
-			"TextPadrao"
+			"TextPadrao",
+			"FundoDaPalavra"
 		],
 		"subfolders": [
 			{
 				"items": [
 					"Botao",
-					"BotaoConfirmarNome",
-					"BotaoResponder",
-					"BotaoIniciarDesafio",
-					"BotaoPalavraEmbaralhada"
+					"BotaoConfirmarNome"
 				],
 				"subfolders": [],
 				"name": "Botoes"
@@ -79,28 +77,38 @@
 			},
 			{
 				"items": [
-					"TextInputEmbaralhadorDePalavra",
-					"TextPalavraEmbaralhada",
+					"TextFinalDesafio",
 					"TextResultado",
-					"TextFinalDesafio"
+					"BotaoIniciarDesafio"
 				],
-				"subfolders": [],
-				"name": "Embaralhador de palavra"
-			},
-			{
-				"items": [
-					"TextContadorDeTempo",
-					"FundoContadorDeTempo"
+				"subfolders": [
+					{
+						"items": [
+							"TextInputEmbaralhadorDePalavra",
+							"TextPalavraEmbaralhada",
+							"BotaoResponder"
+						],
+						"subfolders": [],
+						"name": "Embaralhador de palavra"
+					},
+					{
+						"items": [
+							"TextPalavraDaFrase",
+							"BotaoPalavraDaFrase"
+						],
+						"subfolders": [],
+						"name": "Criador de frase"
+					},
+					{
+						"items": [
+							"TextContadorDeTempo",
+							"FundoContadorDeTempo"
+						],
+						"subfolders": [],
+						"name": "Contador de Tempo"
+					}
 				],
-				"subfolders": [],
-				"name": "Contador de Tempo"
-			},
-			{
-				"items": [
-					"TextPalavraDaFrase"
-				],
-				"subfolders": [],
-				"name": "Criador de frase"
+				"name": "Desafios"
 			}
 		]
 	},
@@ -116,9 +124,10 @@
 			"Cena1",
 			"Cena2",
 			"Cena2_1",
+			"Cena2_2",
 			"Cena3",
 			"Cena3_1",
-			"Cena2_2",
+			"Cena3_2",
 			"EmbaralhadorDePalavras",
 			"CriadorDeFrase"
 		],

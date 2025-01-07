@@ -2,6 +2,20 @@
 	"name": "ES_CriadorDeFrase",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Event sheet 1"
+		},
+		{
+			"eventType": "variable",
+			"name": "frase_completa",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 616907277944968
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -53,9 +67,9 @@
 						{
 							"id": "set-opacity",
 							"objectClass": "TextPalavraDaFrase",
-							"sid": 518001819373396,
+							"sid": 815071986338479,
 							"parameters": {
-								"opacity": "20"
+								"opacity": "40"
 							}
 						}
 					],
@@ -80,7 +94,7 @@
 					"objectClass": "Mouse",
 					"sid": 123188930837553,
 					"parameters": {
-						"object": "BotaoPalavraEmbaralhada"
+						"object": "BotaoPalavraDaFrase"
 					},
 					"isInverted": true
 				}
@@ -135,7 +149,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "BotaoPalavraEmbaralhada"
+						"object-clicked": "BotaoPalavraDaFrase"
 					}
 				}
 			],
@@ -161,13 +175,273 @@
 							"objectClass": "TextPalavraDaFrase",
 							"sid": 997772236655599,
 							"parameters": {
-								"text": "BotaoPalavraEmbaralhada.palavra"
+								"text": "BotaoPalavraDaFrase.palavra"
 							}
+						},
+						{
+							"callFunction": "avaliar_resultado",
+							"sid": 752648904146147
 						}
 					],
 					"sid": 551692520905406
 				}
 			]
+		},
+		{
+			"eventType": "comment",
+			"text": "---Avaliar resultado"
+		},
+		{
+			"functionName": "avaliar_resultado",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 296900146236239,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "quantidade_de_palavras_certas",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 111885716323405
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 388292388288944,
+							"parameters": {
+								"object": "TextPalavraDaFrase"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 922226488893086,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-text",
+									"objectClass": "TextPalavraDaFrase",
+									"sid": 534538761928747,
+									"parameters": {
+										"text-to-compare": "Self.resposta_certa",
+										"case-sensitivity": "ignore-case"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 457870081858615,
+									"parameters": {
+										"variable": "quantidade_de_palavras_certas",
+										"value": "quantidade_de_palavras_certas+1"
+									}
+								}
+							],
+							"sid": 269280910000057
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 359058225731413
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 344486078376656,
+									"parameters": {
+										"variable": "quantidade_de_palavras_certas",
+										"value": "quantidade_de_palavras_certas-1"
+									}
+								}
+							],
+							"sid": 705327024147154
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 867830336713980,
+							"parameters": {
+								"variable": "quantidade_de_palavras_certas",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 308037919946631,
+							"parameters": {
+								"instance-variable": "esta_contando",
+								"value": "false"
+							}
+						},
+						{
+							"callFunction": "calcular_pontos_criador_de_frase",
+							"sid": 678913297966070
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 439038348145211,
+							"parameters": {
+								"layer": "\"Desafio\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 301277250731064,
+							"parameters": {
+								"seconds": "0.4"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 684764026426277,
+							"parameters": {
+								"layer": "\"Final\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 153657777266841
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Avaliar resultado---"
+		},
+		{
+			"eventType": "comment",
+			"text": "---Calcular pontos"
+		},
+		{
+			"functionName": "calcular_pontos_criador_de_frase",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 728338369617091,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 213727790419949,
+							"parameters": {
+								"instance-variable": "tempo",
+								"comparison": 4,
+								"value": "15"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "append-text",
+							"objectClass": "TextFinalDesafio",
+							"sid": 878184749916682,
+							"parameters": {
+								"text": "str(5)"
+							}
+						}
+					],
+					"sid": 221090198385823
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 784107630317531
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "TextContadorDeTempo",
+							"sid": 600402770410390,
+							"parameters": {
+								"instance-variable": "tempo",
+								"comparison": 4,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "append-text",
+							"objectClass": "TextFinalDesafio",
+							"sid": 685737362960339,
+							"parameters": {
+								"text": "str(25)"
+							}
+						}
+					],
+					"sid": 914873103818801
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 300862077633203
+						}
+					],
+					"actions": [
+						{
+							"id": "append-text",
+							"objectClass": "TextFinalDesafio",
+							"sid": 309915340374688,
+							"parameters": {
+								"text": "str(50)"
+							}
+						}
+					],
+					"sid": 341530560385996
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Calcular pontos---"
 		},
 		{
 			"eventType": "group",
@@ -199,7 +473,7 @@
 									"objectClass": "Mouse",
 									"sid": 382770179207221,
 									"parameters": {
-										"object": "BotaoPalavraEmbaralhada"
+										"object": "BotaoPalavraDaFrase"
 									}
 								}
 							],
@@ -230,7 +504,7 @@
 									"actions": [
 										{
 											"id": "set-animation",
-											"objectClass": "BotaoPalavraEmbaralhada",
+											"objectClass": "BotaoPalavraDaFrase",
 											"sid": 252200878758699,
 											"parameters": {
 												"animation": "\"Pressionado\"",
@@ -252,7 +526,7 @@
 									"actions": [
 										{
 											"id": "set-animation",
-											"objectClass": "BotaoPalavraEmbaralhada",
+											"objectClass": "BotaoPalavraDaFrase",
 											"sid": 563804542667588,
 											"parameters": {
 												"animation": "\"Sobreposto\"",
@@ -276,7 +550,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "BotaoPalavraEmbaralhada",
+									"objectClass": "BotaoPalavraDaFrase",
 									"sid": 245730909202057,
 									"parameters": {
 										"animation": "\"Normal\"",
@@ -298,6 +572,127 @@
 				}
 			],
 			"sid": 740521938046855
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "BotaoPalavraDaFrase",
+					"sid": 958823730595616
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "BotaoPalavraDaFrase",
+					"sid": 742423772286230,
+					"parameters": {
+						"object": "TextPadrao",
+						"layer": "\"Desafio\"",
+						"image-point": "\"Texto\"",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TextPadrao",
+					"sid": 615064022441502,
+					"parameters": {
+						"text": "BotaoPalavraDaFrase.palavra"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "TextPadrao",
+					"sid": 694330359611746,
+					"parameters": {
+						"width": "BotaoPalavraDaFrase.Width",
+						"height": "BotaoPalavraDaFrase.Height"
+					}
+				}
+			],
+			"sid": 774924698657974
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 694244084680594,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BotaoIniciarDesafio"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 578339296140653,
+					"parameters": {
+						"layer": "\"Menu de escolhas\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 275067399711695,
+					"parameters": {
+						"layer": "\"Menu de escolhas\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 538997017622462,
+					"parameters": {
+						"layer": "\"Fluxo de Texto\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 649750791903306,
+					"parameters": {
+						"seconds": "0.4"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 787129738840963,
+					"parameters": {
+						"layer": "\"Desafio\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 412701769161101,
+					"parameters": {
+						"layer": "\"Contador de Tempo\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "TextContadorDeTempo",
+					"sid": 823680849194743,
+					"parameters": {
+						"instance-variable": "esta_contando",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 905747921982458
 		}
 	],
 	"sid": 809212052281758

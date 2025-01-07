@@ -510,7 +510,7 @@
 							}
 						},
 						{
-							"callFunction": "calcular_pontos",
+							"callFunction": "calcular_pontos_embaralhador_de_palavras",
 							"sid": 258000098427778
 						},
 						{
@@ -564,7 +564,7 @@
 			"text": "---Calcular pontos"
 		},
 		{
-			"functionName": "calcular_pontos",
+			"functionName": "calcular_pontos_embaralhador_de_palavras",
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
