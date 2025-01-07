@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "nome",
 			"type": "string",
-			"initialValue": "Keith",
+			"initialValue": "Persoangem",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -25,7 +25,7 @@
 			"eventType": "variable",
 			"name": "pontos",
 			"type": "number",
-			"initialValue": "6",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -78,7 +78,7 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Botao",
-									"sid": 115109712831557,
+									"sid": 208595064991823,
 									"parameters": {
 										"instance-variable": "botao_extra"
 									}
@@ -323,18 +323,43 @@
 										},
 										{
 											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Botao",
+													"sid": 143145647998680,
+													"parameters": {
+														"instance-variable": "pontuacao_por_escolha",
+														"comparison": 4,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "definir_pontos",
+													"sid": 149047617544264,
+													"parameters": [
+														"Botao.pontuacao_por_escolha"
+													]
+												}
+											],
+											"sid": 715977805932207
+										},
+										{
+											"eventType": "block",
 											"conditions": [],
 											"actions": [
 												{
 													"id": "go-to-layout-by-name",
 													"objectClass": "System",
-													"sid": 142254233505774,
+													"sid": 104978916384992,
 													"parameters": {
 														"layout": "Botao.destino"
 													}
 												}
 											],
-											"sid": 715977805932207
+											"sid": 482907501649811
 										}
 									]
 								}
@@ -1030,10 +1055,10 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 926653612677291,
+							"sid": 734632666241530,
 							"parameters": {
 								"object-to-create": "TelaDePontos",
-								"layer": "100",
+								"layer": "0",
 								"x": "150",
 								"y": "-30",
 								"create-hierarchy": true,
@@ -1085,9 +1110,9 @@
 								{
 									"id": "set-y",
 									"objectClass": "TelaDePontos",
-									"sid": 966277692775206,
+									"sid": 124674691124604,
 									"parameters": {
-										"y": "Self.Y + dt * 120"
+										"y": "Self.Y + dt * 320"
 									}
 								}
 							],
@@ -1209,7 +1234,7 @@
 										{
 											"id": "destroy",
 											"objectClass": "TelaDePontos",
-											"sid": 359576324452326
+											"sid": 672512923429436
 										}
 									],
 									"sid": 621244906844473

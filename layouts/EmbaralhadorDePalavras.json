@@ -287,7 +287,8 @@
 						"destino": "Cena1",
 						"desbloquear_cena_extra": false,
 						"botao_extra": false,
-						"desabilitado": false
+						"desabilitado": false,
+						"pontuacao_por_escolha": 0
 					},
 					"behaviors": {},
 					"instanceFolderItem": {

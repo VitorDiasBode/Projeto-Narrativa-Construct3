@@ -866,7 +866,8 @@
 						"destino": "Cena2Extra",
 						"desbloquear_cena_extra": false,
 						"botao_extra": true,
-						"desabilitado": false
+						"desabilitado": false,
+						"pontuacao_por_escolha": 0
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
@@ -911,7 +912,8 @@
 						"destino": "CenaFinal",
 						"desbloquear_cena_extra": false,
 						"botao_extra": false,
-						"desabilitado": false
+						"desabilitado": false,
+						"pontuacao_por_escolha": 0
 					},
 					"behaviors": {},
 					"instanceFolderItem": {

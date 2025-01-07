@@ -31,6 +31,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 887811070590966
+		},
+		{
+			"name": "pontuacao_por_escolha",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 250612906234614
 		}
 	],
 	"behaviorTypes": [],
