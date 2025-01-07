@@ -10,7 +10,7 @@
 					"type": "TelaDeFundo",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Cena2_1",
+						"initial-animation": "Cena3_1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -94,8 +94,8 @@
 					"sid": 391204737326160,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_2",
-						"desbloquear_cena_extra": false,
+						"destino": "Cena3_2",
+						"desbloquear_cena_extra": true,
 						"botao_extra": false,
 						"desabilitado": false,
 						"pontuacao_por_escolha": 0
@@ -140,7 +140,7 @@
 					"sid": 327332310935479,
 					"tags": "",
 					"instanceVariables": {
-						"destino": "Cena2_2",
+						"destino": "Cena3_2",
 						"desbloquear_cena_extra": false,
 						"botao_extra": false,
 						"desabilitado": false,
@@ -176,7 +176,7 @@
 				{
 					"type": "TextPadrao",
 					"properties": {
-						"text": "Tentar decifrar o símbolo",
+						"text": "Seguir a trilha iluminada",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -232,7 +232,7 @@
 				{
 					"type": "TextPadrao",
 					"properties": {
-						"text": "Ignorar o símbolo e seguir para as ruínas",
+						"text": "Entrar no bosque escuro",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -363,7 +363,7 @@
 				{
 					"type": "FluxoDeTexto",
 					"properties": {
-						"text": "{nome do personagem} se aproxima do símbolo no chão. As linhas brilhavam fracamente enquanto ele o examinava. Uma voz ecoa ao longe: 'Escolhas definem o futuro.' O símbolo parece pedir algo mais... mas o que? Por outro lado, as ruínas ao norte chamam com um sussurro mais forte. O que {nome do personagem} fará?",
+						"text": "Enquanto {nome do personagem} segue pela floresta, ele percebe algo curioso: a trilha iluminada parece encantar tudo ao seu redor, mas o bosque escuro emite uma pulsação familiar. Um sentimento de déjà vu toma conta dele. O que deveria fazer?",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,

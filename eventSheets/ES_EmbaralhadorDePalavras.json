@@ -598,6 +598,13 @@
 							"parameters": {
 								"text": "str(5)"
 							}
+						},
+						{
+							"callFunction": "definir_pontos",
+							"sid": 702864157489739,
+							"parameters": [
+								"5"
+							]
 						}
 					],
 					"sid": 940571495934339
@@ -629,6 +636,13 @@
 							"parameters": {
 								"text": "str(25)"
 							}
+						},
+						{
+							"callFunction": "definir_pontos",
+							"sid": 743570256940702,
+							"parameters": [
+								"25"
+							]
 						}
 					],
 					"sid": 658839714436417
@@ -650,6 +664,13 @@
 							"parameters": {
 								"text": "str(50)"
 							}
+						},
+						{
+							"callFunction": "definir_pontos",
+							"sid": 825259422828102,
+							"parameters": [
+								"50"
+							]
 						}
 					],
 					"sid": 356486124465833

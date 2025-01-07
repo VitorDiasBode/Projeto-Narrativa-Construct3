@@ -1,5 +1,5 @@
 {
-	"name": "Cena2Extra",
+	"name": "Cena3Extra",
 	"layers": [
 		{
 			"name": "Tela de Fundo",
@@ -10,18 +10,18 @@
 					"type": "TelaDeFundo",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Cena2_Extra",
+						"initial-animation": "Cena3_Extra",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 120,
-					"sid": 646420309277721,
+					"uid": 122,
+					"sid": 748243853303791,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 646420309277721,
+						"sid": 748243853303791,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -47,7 +47,7 @@
 					}
 				}
 			],
-			"sid": 581009478166321,
+			"sid": 644980113352783,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -90,8 +90,8 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 121,
-					"sid": 916787246447612,
+					"uid": 124,
+					"sid": 750287149515897,
 					"tags": "",
 					"instanceVariables": {
 						"destino": "CenaFinal",
@@ -102,7 +102,7 @@
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 916787246447612,
+						"sid": 750287149515897,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -152,13 +152,13 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 123,
-					"sid": 453789736153179,
+					"uid": 127,
+					"sid": 999937328284731,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 453789736153179,
+						"sid": 999937328284731,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -184,7 +184,7 @@
 					}
 				}
 			],
-			"sid": 371075461706914,
+			"sid": 846350550719178,
 			"effectTypes": [],
 			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
@@ -227,13 +227,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 125,
-					"sid": 392016445843658,
+					"uid": 128,
+					"sid": 639913358476744,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 392016445843658,
+						"sid": 639913358476744,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -261,7 +261,7 @@
 				{
 					"type": "FluxoDeTexto",
 					"properties": {
-						"text": "Enquanto {nome do personagem} examina o símbolo que acabou de decifrar, ele percebe uma inscrição escondida. Com cuidado, ele toca na inscrição, e uma visão toma conta de sua mente. Ele vê o passado da vila, quando ainda era próspera e cheia de vida. Uma figura misteriosa aparece na visão e sussurra: 'Nem tudo está perdido. Use o conhecimento para restaurar o equilíbrio.'\nO que isso significa? {nome do personagem} sente que tem um papel importante nessa história.",
+						"text": "Enquanto {nome do personagem} reflete sobre a mensagem positiva formada no desafio, ele encontra uma antiga inscrição na parede de pedra. A inscrição conta a história de um herói que, com coragem e esperança, iluminou o caminho de seu povo em tempos sombrios.\n'A luz não é ausência de escuridão, mas a força de quem a carrega,' diz a inscrição. Inspirado, {nome do personagem} sente uma energia renovada e um propósito ainda mais forte para seguir adiante.",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -283,8 +283,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 126,
-					"sid": 345148656186123,
+					"uid": 129,
+					"sid": 127640492883878,
 					"tags": "",
 					"instanceVariables": {
 						"texto_final": "",
@@ -295,7 +295,7 @@
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 345148656186123,
+						"sid": 127640492883878,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -321,7 +321,7 @@
 					}
 				}
 			],
-			"sid": 973120200449613,
+			"sid": 358875951861455,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -355,7 +355,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 849540653495257,
+	"sid": 883102712625161,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 2048,

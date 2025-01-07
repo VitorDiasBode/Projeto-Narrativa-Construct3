@@ -265,6 +265,14 @@
 									"parameters": {
 										"layer": "\"Menu de escolhas\""
 									}
+								},
+								{
+									"id": "layer-is-visible",
+									"objectClass": "System",
+									"sid": 871453169228635,
+									"parameters": {
+										"layer": "\"Final\""
+									}
 								}
 							],
 							"actions": [],
@@ -363,7 +371,8 @@
 										}
 									]
 								}
-							]
+							],
+							"isOrBlock": true
 						}
 					],
 					"sid": 750952615991146
