@@ -1,0 +1,47 @@
+{
+	"name": "TelaDePontos",
+	"plugin-id": "Sprite",
+	"sid": 367636173495143,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "estado",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 471361417128963
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2869086,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 966011719077681,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

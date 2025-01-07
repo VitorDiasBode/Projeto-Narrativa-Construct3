@@ -40,7 +40,8 @@
 		"items": [
 			"Mouse",
 			"TextPadrao",
-			"FundoDaPalavra"
+			"TelaDePontos",
+			"TextPontos"
 		],
 		"subfolders": [
 			{
@@ -78,7 +79,6 @@
 			{
 				"items": [
 					"TextFinalDesafio",
-					"TextResultado",
 					"BotaoIniciarDesafio"
 				],
 				"subfolders": [
@@ -86,7 +86,8 @@
 						"items": [
 							"TextInputEmbaralhadorDePalavra",
 							"TextPalavraEmbaralhada",
-							"BotaoResponder"
+							"BotaoResponder",
+							"TextResultado"
 						],
 						"subfolders": [],
 						"name": "Embaralhador de palavra"
@@ -94,7 +95,8 @@
 					{
 						"items": [
 							"TextPalavraDaFrase",
-							"BotaoPalavraDaFrase"
+							"BotaoPalavraDaFrase",
+							"FundoDaPalavra"
 						],
 						"subfolders": [],
 						"name": "Criador de frase"

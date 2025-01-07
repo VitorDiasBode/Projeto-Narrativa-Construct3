@@ -39,6 +39,13 @@
 						"layer": "\"Menu de escolhas\"",
 						"visibility": "invisible"
 					}
+				},
+				{
+					"callFunction": "definir_pontos",
+					"sid": 661995431156229,
+					"parameters": [
+						"20"
+					]
 				}
 			],
 			"sid": 827218790724300
@@ -867,6 +874,229 @@
 				}
 			],
 			"sid": 733634100842372
+		},
+		{
+			"eventType": "variable",
+			"name": "pontos",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 194761465606219
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pontos ",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "definir_pontos",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "valor",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 697133552394826
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 926653612677291,
+							"parameters": {
+								"object-to-create": "TelaDePontos",
+								"layer": "100",
+								"x": "150",
+								"y": "-30",
+								"create-hierarchy": true,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 437253890771121,
+							"parameters": {
+								"variable": "pontos",
+								"value": "pontos+valor"
+							}
+						}
+					],
+					"sid": 812639796622854
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "TelaDePontos",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "TelaDePontos",
+									"sid": 626004093921239,
+									"parameters": {
+										"instance-variable": "estado",
+										"comparison": 0,
+										"value": "\"mostrando\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "TelaDePontos",
+									"sid": 966277692775206,
+									"parameters": {
+										"y": "Self.Y + dt * 120"
+									}
+								}
+							],
+							"sid": 176619162685081,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-y",
+											"objectClass": "TelaDePontos",
+											"sid": 797250342081644,
+											"parameters": {
+												"comparison": 4,
+												"y-co-ordinate": "60"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "TelaDePontos",
+											"sid": 188665851664506,
+											"parameters": {
+												"instance-variable": "estado",
+												"value": "\"esperando\""
+											}
+										}
+									],
+									"sid": 555952162817644
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 633453169012382
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "TelaDePontos",
+									"sid": 855568416296088,
+									"parameters": {
+										"instance-variable": "estado",
+										"comparison": 0,
+										"value": "\"esperando\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 527428176643814,
+									"parameters": {
+										"seconds": "1.5"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "TelaDePontos",
+									"sid": 451207058404061,
+									"parameters": {
+										"instance-variable": "estado",
+										"value": "\"escondendo\""
+									}
+								}
+							],
+							"sid": 469011321977903
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 993467682492107
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "TelaDePontos",
+									"sid": 904313604577276,
+									"parameters": {
+										"instance-variable": "estado",
+										"comparison": 0,
+										"value": "\"escondendo\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "TelaDePontos",
+									"sid": 557828360366075,
+									"parameters": {
+										"y": "Self.Y - dt * 120"
+									}
+								}
+							],
+							"sid": 950377344305739,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-y",
+											"objectClass": "TelaDePontos",
+											"sid": 108710532284417,
+											"parameters": {
+												"comparison": 2,
+												"y-co-ordinate": "-30"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "TelaDePontos",
+											"sid": 359576324452326
+										}
+									],
+									"sid": 621244906844473
+								}
+							]
+						}
+					],
+					"sid": 925813468751750
+				}
+			],
+			"sid": 804128703782196
 		}
 	],
 	"sid": 385103902642560
