@@ -61,15 +61,15 @@
 			{
 				"frames": [
 					{
-						"width": 1440,
-						"height": 1024,
+						"width": 1024,
+						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1334772,
+						"imageSpriteId": 1730718,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -111,7 +111,7 @@
 			{
 				"frames": [
 					{
-						"width": 1044,
+						"width": 1024,
 						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -119,7 +119,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1976602,
+						"imageSpriteId": 8620570,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -136,15 +136,15 @@
 			{
 				"frames": [
 					{
-						"width": 1440,
-						"height": 1024,
+						"width": 1024,
+						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7537506,
+						"imageSpriteId": 4289975,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -161,15 +161,15 @@
 			{
 				"frames": [
 					{
-						"width": 1440,
-						"height": 1024,
+						"width": 1024,
+						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 621710,
+						"imageSpriteId": 3749169,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -211,7 +211,7 @@
 			{
 				"frames": [
 					{
-						"width": 1044,
+						"width": 1024,
 						"height": 600,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -219,7 +219,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 3101169,
+						"imageSpriteId": 4399794,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -227,6 +227,56 @@
 				],
 				"sid": 365129345506423,
 				"name": "Cena3_Extra",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1024,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8825627,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 273136499084178,
+				"name": "FinalPositivo",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1024,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9421904,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 437449810292715,
+				"name": "FinalNegativo",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

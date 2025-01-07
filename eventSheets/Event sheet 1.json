@@ -39,13 +39,6 @@
 						"layer": "\"Menu de escolhas\"",
 						"visibility": "invisible"
 					}
-				},
-				{
-					"callFunction": "definir_pontos",
-					"sid": 661995431156229,
-					"parameters": [
-						"20"
-					]
 				}
 			],
 			"sid": 827218790724300
@@ -931,6 +924,14 @@
 							"parameters": {
 								"variable": "pontos",
 								"value": "pontos+valor"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TextPontos",
+							"sid": 820294631513921,
+							"parameters": {
+								"text": "\"Você ganhou \"&str(valor)&\" pontos\""
 							}
 						}
 					],

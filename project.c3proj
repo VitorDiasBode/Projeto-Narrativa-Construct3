@@ -39,9 +39,7 @@
 	"objectTypes": {
 		"items": [
 			"Mouse",
-			"TextPadrao",
-			"TelaDePontos",
-			"TextPontos"
+			"TextPadrao"
 		],
 		"subfolders": [
 			{
@@ -111,6 +109,14 @@
 					}
 				],
 				"name": "Desafios"
+			},
+			{
+				"items": [
+					"TelaDePontos",
+					"TextPontos"
+				],
+				"subfolders": [],
+				"name": "Sistema de Pontos"
 			}
 		]
 	},
